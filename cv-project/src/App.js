@@ -4,10 +4,9 @@ import './App.css'
 function App() {
   return (
     <div>
-      <p>Clean React App</p>
+      <p className='title'>CV CREATOR</p>
     </div>
   )
 }
 
 export default App
-
