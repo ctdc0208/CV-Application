@@ -7,3 +7,37 @@
     padding: 1rem;
     margin: 0rem;
 }
+
+.main-container {
+    display: block;
+    max-width: 60rem;
+    width: 100%;
+    padding: 1rem;
+    margin-left: auto;
+    margin-right: auto;
+    min-height: 100%;
+
+    background-color: lightgray;
+    min-height: 50rem;
+}
+
+.container-one {
+    float: left;
+    display: flex;
+    flex-direction: column;
+    width: 35%;
+    margin-left: auto;
+    margin-right: auto;
+    min-height: 100%;
+    background-color: lightpink;
+    min-height: 50rem;
+}
+.container-two {
+    float: right;
+    width: 65%;
+    margin-left: auto;
+    margin-right: auto;
+    min-height: 100%;
+    background-color: lightgreen;
+    min-height: 50rem;
+}
