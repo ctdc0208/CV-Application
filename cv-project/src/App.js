@@ -2,6 +2,10 @@ import React, { Component } from 'react';
 import './App.css';
 import Header from './Header';
 import Tab from './Tab';
+import Personal from './Forms/Personal';
+import Experience from './Forms/Experience';
+import Education from './Forms/Education';
+
 
 class App extends Component {
       constructor(props) {
@@ -55,7 +59,9 @@ class App extends Component {
             </form>
           </div>
             <div className='container-two'>
-
+              <Personal />
+              <Experience />
+              <Education />
             </div>
           </div>
         </div>
