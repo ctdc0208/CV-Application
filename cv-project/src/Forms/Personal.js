@@ -7,10 +7,10 @@ class Personal extends React.Component {
 
                 <div>Basic Information</div>
                 <form>
-                    <input type='text' id='title' name='title' autocomplete="off" placeholder='Full Name' size="40" required></input>
-                    <input type='text' id='title' name='title' autocomplete="off" placeholder='E-mail Address' size="40" required></input>
-                    <input type='text' id='title' name='title' autocomplete="off" placeholder='Phone Number' size="40" required></input>
-                    <input type='text' id='title' name='title' autocomplete="off" placeholder='Address' size="40" required></input>
+                    <input type='text' id='title' name='title' placeholder='Full Name' required></input>
+                    <input type='text' id='title' name='title' placeholder='E-mail Address'  required></input>
+                    <input type='text' id='title' name='title' placeholder='Phone Number' required></input>
+                    <input type='text' id='title' name='title' placeholder='Address'  required></input>
                 </form>
 
             </div>

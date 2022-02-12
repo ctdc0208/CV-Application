@@ -2,9 +2,7 @@ import React, { Component } from 'react';
 import './App.css';
 import Header from './Header';
 import Tab from './Tab';
-import Personal from './Forms/Personal';
-import Experience from './Forms/Experience';
-import Education from './Forms/Education';
+import Information from './Information';
 
 
 class App extends Component {
@@ -58,11 +56,7 @@ class App extends Component {
               </button>
             </form>
           </div>
-            <div className='container-two'>
-              <Personal />
-              <Experience />
-              <Education />
-            </div>
+              <Information />
           </div>
         </div>
       )

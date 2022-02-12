@@ -1,13 +1,3 @@
-.title {
-    font-size: 2rem;
-    color: white;
-    text-align: center;
-    background-color: black;
-    box-sizing: border-box;
-    padding: 1rem;
-    margin: 0rem;
-}
-
 .main-container {
     display: block;
     max-width: 60rem;
@@ -32,12 +22,13 @@
     background-color: lightpink;
     min-height: 50rem;
 }
-.container-two {
-    float: right;
-    width: 65%;
-    margin-left: auto;
-    margin-right: auto;
-    min-height: 100%;
-    background-color: lightgreen;
-    min-height: 50rem;
+
+input {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 1.5rem;
+    margin-left: 0.5rem;
+    margin-bottom: 0.5rem;
+    width: 96%;
 }

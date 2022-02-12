@@ -1,0 +1,9 @@
+.container-two {
+    float: right;
+    width: 65%;
+    margin-left: auto;
+    margin-right: auto;
+    min-height: 100%;
+    background-color: lightgreen;
+    min-height: 50rem;
+}
