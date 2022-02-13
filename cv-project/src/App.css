@@ -6,9 +6,7 @@
     margin-left: auto;
     margin-right: auto;
     min-height: 100%;
-
-    background-color: lightgray;
-    min-height: 50rem;
+    line-height: 1.5;
 }
 
 .container-one {
@@ -19,16 +17,4 @@
     margin-left: auto;
     margin-right: auto;
     min-height: 100%;
-    background-color: lightpink;
-    min-height: 50rem;
-}
-
-input {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    height: 1.5rem;
-    margin-left: 0.5rem;
-    margin-bottom: 0.5rem;
-    width: 96%;
 }

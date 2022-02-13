@@ -7,10 +7,12 @@ import Education from './Forms/Education';
 class Information extends React.Component {    
     render() {
         return (
-            <div className="container-two">
-                <Personal />
-                <Experience />
-                <Education />
+            <div className="main-container">
+                <div className="container">
+                    <Personal />
+                    <Experience />
+                    <Education />
+                </div>
             </div>
         )
     }

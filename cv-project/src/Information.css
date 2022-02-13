@@ -1,9 +1,31 @@
-.container-two {
-    float: right;
-    width: 65%;
+.main-container {
+    display: block;
+    max-width: 55rem;
+    width: 100%;
+    padding: 1rem;
     margin-left: auto;
     margin-right: auto;
     min-height: 100%;
-    background-color: lightgreen;
+    line-height: 1.5;
+    font-size: 2rem;
+}
+
+.container {
+    float: right;
+    width: 100%;
+    margin-left:  auto;
+    margin-right: auto;
+    min-height: 100%;
     min-height: 50rem;
 }
+
+input {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 2rem;
+    margin-left: 0.2rem;
+    margin-bottom: 0.2rem;
+    width: 96%;
+}
+

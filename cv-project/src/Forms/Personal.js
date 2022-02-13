@@ -5,7 +5,7 @@ class Personal extends React.Component {
         return (
             <div>
 
-                <div>Basic Information</div>
+                <p1>Basic Information</p1>
                 <form>
                     <input type='text' id='title' name='title' placeholder='Full Name' required></input>
                     <input type='text' id='title' name='title' placeholder='E-mail Address'  required></input>

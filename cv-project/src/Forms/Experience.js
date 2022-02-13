@@ -5,7 +5,7 @@ class Experience extends React.Component {
         return (
             <div>
 
-                <div>Experience</div>
+                <p1>Experience</p1>
                 <form>
                     <input type='text' id='title' name='title' autocomplete="off" placeholder='Job Title' size="40" required></input>
                     <input type='text' id='title' name='title' autocomplete="off" placeholder='Company Name' size="40" required></input>
