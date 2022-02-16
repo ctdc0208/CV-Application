@@ -1,29 +1,85 @@
-import React from "react";
+import React,{ Component } from 'react'
 
-class Experience extends React.Component {    
-    render() {
-        return (
-            <div>
+class Experience extends Component{
+constructor(props){
+	super(props)
+	this.state = { course:'', institution:'', startDate:'', endDate:''}
+	this.handleChange = this.handleChange.bind(this)
+	this.handleSubmit = this.handleSubmit.bind(this)
+}
 
-                <p1>Experience</p1>
-                <form>
-                    <input type='text' id='title' name='title' autocomplete="off" placeholder='Job Title' size="40" required></input>
-                    <input type='text' id='title' name='title' autocomplete="off" placeholder='Company Name' size="40" required></input>
-                    <input type='text' id='title' name='title' autocomplete="off" placeholder='Start Date' size="40" required></input>
-                    <input type='text' id='title' name='title' autocomplete="off" placeholder='End Date' size="40" required></input>
-                    <div className="bullet-points">
-                        <div>Skills Acquired</div>
-                        <input type='text' id='title' name='title' autocomplete="off" placeholder='One Skill' size="40" required></input>
-                        <input type='text' id='title' name='title' autocomplete="off" placeholder='Two Skill' size="40" required></input>
-                        <input type='text' id='title' name='title' autocomplete="off" placeholder='Three Skill' size="40" required></input>
-                        <button>add</button>
-                    </div>
-                    <button>Add</button>
-                </form>
+// Form submitting logic, prevent default page refresh
+handleSubmit(event){
+	const { course, institution, startDate, endDate} = this.state
+	event.preventDefault()
+	alert(`
+	____Your Details____\n
+	course : ${course}
+	institution : ${institution}
+	startDate : ${startDate}
+	endDate : ${endDate}
+	`)
+}
 
-            </div>
-        )
-    }
+// Method causes to store all the values of the
+// input field in react state single method handle
+// input changes of all the input field using ES6
+// javascript feature computed property names
+handleChange(event){
+	this.setState({
+	// Computed property names
+	// keys of the objects are computed dynamically
+	[event.target.name] : event.target.value
+	})
+}
+
+// Return a controlled form i.e. values of the
+// input field not stored in DOM values are exist
+// in react component itself as state
+render(){
+	return(
+        <div>
+    <p1>Experience</p1>
+	<form onSubmit={this.handleSubmit}>
+		<div>
+		<input
+			name='course'
+			placeholder='Course Name'
+			value = {this.state.course}
+			onChange={this.handleChange}
+		/>
+		</div>
+		<div>
+		<input
+			name='institution'
+			placeholder='Institution Name'
+			value={this.state.institution}
+			onChange={this.handleChange}
+		/>
+		</div>
+		<div>
+		<input
+			name='startDate'
+			placeholder='Start Date'
+			value={this.state.startDate}
+			onChange={this.handleChange}
+		/>
+		</div>
+		<div>
+		<input
+			name='endDate'
+			placeholder='End Date'
+			value={this.state.endDate}
+			onChange={this.handleChange}
+		/>
+		</div>
+		<div>
+		<button>Create Account</button>
+		</div>
+	</form>
+    </div>
+	)
+}
 }
 
 export default Experience
