@@ -1,72 +1,46 @@
-import React,{ Component } from 'react'
+/* eslint-disable jsx-a11y/accessible-emoji */
+import React from 'react'
+import { Field } from 'react-final-form'
 
-class Experience extends Component{
-	constructor(props){
-		super(props)
-		this.state = { course:'', institution:'', startDate:'', endDate:''}
-		this.handleChange = this.handleChange.bind(this)
-		this.handleSubmit = this.handleSubmit.bind(this)
-	}
 
-	handleSubmit(event){
-		const { course, institution, startDate, endDate} = this.state
-		event.preventDefault()
-		alert(`
-		____Your Education____\n
-		course : ${course}
-		institution : ${institution}
-		startDate : ${startDate}
-		endDate : ${endDate}
-		`)
-	}
+const Education = () => (
+  <React.Fragment>
+            <div>
+                <label>Experience</label>
+                <div>
+                    <Field
+                    name="courseName"
+                    component="input"
+                    type="text"
+                    placeholder="Course Name"
+                    />
+                </div>
+                <div>
+                    <Field
+                    name="institutionName"
+                    component="input"
+                    type="text"
+                    placeholder="Institution Name"
+                    />
+                </div>  
+                <div>
+                    <Field
+                    name="startDateEducation"
+                    component="input"
+                    type="text"
+                    placeholder="Start Date"
+                    />
+                </div>
+                <div>
+                    <Field
+                    name="endDateEducation"
+                    component="input"
+                    type="text"
+                    placeholder="End Date"
+                    />
+                </div>
+            </div>
+   </React.Fragment>
+)
 
-	handleChange(event){
-		this.setState({
-		[event.target.name] : event.target.value
-		})
-	}
-
-	render(){
-		return(
-			<div>
-		<p1>Education</p1>
-		<form onSubmit={this.handleSubmit}>
-			<div>
-			<input
-				name='course'
-				placeholder='Course Name'
-				value = {this.state.course}
-				onChange={this.handleChange}
-			/>
-			</div>
-			<div>
-			<input
-				name='institution'
-				placeholder='Institution Name'
-				value={this.state.institution}
-				onChange={this.handleChange}
-			/>
-			</div>
-			<div>
-			<input
-				name='startDate'
-				placeholder='Start Date'
-				value={this.state.startDate}
-				onChange={this.handleChange}
-			/>
-			</div>
-			<div>
-			<input
-				name='endDate'
-				placeholder='End Date'
-				value={this.state.endDate}
-				onChange={this.handleChange}
-			/>
-			</div>
-		</form>
-		</div>
-		)
-	}
-}
-
-export default Experience
+export default Education

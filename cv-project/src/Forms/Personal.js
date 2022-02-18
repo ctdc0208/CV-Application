@@ -1,81 +1,49 @@
-import React,{ Component } from 'react'
+/* eslint-disable jsx-a11y/accessible-emoji */
+import React from 'react'
+import { Field } from 'react-final-form'
 
-class Personal extends Component{
-	constructor(props){
-		super(props)
-		this.state = { email:'',name:'', age:'', address:'',phoneNo:''}
-		this.handleChange = this.handleChange.bind(this)
-		this.handleSubmit = this.handleSubmit.bind(this)
-	}
 
-	handleSubmit(event){
-		const { email, name, age, address, phoneNo } = this.state
-		event.preventDefault()
-		alert(`
-		____Your Personal Information____\n
-		Email : ${email}
-		Name : ${name}
-		Age : ${age}
-		Address : ${address}
-		Phone No : ${phoneNo}
-		`)
-	}
+const Personal = () => (
+  <React.Fragment>
 
-	handleChange(event){
-		this.setState({
-		[event.target.name] : event.target.value
-		})
-	}
-
-	render(){
-		return(
-			<div>
-				<p1>Personal Information</p1>
-				<form onSubmit={this.handleSubmit}>
-					<div>
-					<input
-						name='email'
-						placeholder='Email'
-						value = {this.state.email}
-						onChange={this.handleChange}
-					/>
-					</div>
-					<div>
-					<input
-						name='name'
-						placeholder='Name'
-						value={this.state.name}
-						onChange={this.handleChange}
-					/>
-					</div>
-					<div>
-					<input
-						name='age'
-						placeholder='Age'
-						value={this.state.age}
-						onChange={this.handleChange}
-					/>
-					</div>
-					<div>
-					<input
-						name='address'
-						placeholder='Address'
-						value={this.state.address}
-						onChange={this.handleChange}
-					/>
-					</div>
-					<div>
-					<input
-						name='phoneNo'
-						placeholder='Phone No'
-						value={this.state.phoneNo}
-						onChange={this.handleChange}
-					/>
-					</div>
-				</form>
-		</div>
-		)
-	}
-}
+            <div>
+                <label>Personal Information</label>
+                <div>
+                    <Field
+                    name="name"
+                    component="input"
+                    type="text"
+                    placeholder="Name"
+                    />
+                </div>
+                <div>
+                    <Field
+                    name="email"
+                    component="input"
+                    type="text"
+                    placeholder="Email"
+                    />
+                </div>  
+                <div>
+                    <Field
+                    name="address"
+                    component="input"
+                    type="text"
+                    placeholder="Address"
+                    />
+                </div>
+                <div>
+                    <Field
+                    name="phoneNumber"
+                    component="input"
+                    type="text"
+                    placeholder="Phone Number"
+                    />
+                </div>
+            </div>
+   </React.Fragment>
+)
 
 export default Personal
+
+

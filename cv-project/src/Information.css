@@ -1,35 +1,50 @@
-.main-container {
-    display: block;
-    max-width: 55rem;
-    width: 100%;
-    padding: 1rem;
-    margin-left: auto;
-    margin-right: auto;
-    min-height: 100%;
-    line-height: 1.5;
-    font-size: 2rem;
-}
-
-.container {
-    float: right;
-    width: 100%;
-    margin-left:  auto;
-    margin-right: auto;
-    min-height: 100%;
-    min-height: 50rem;
-}
-
-input {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    height: 2rem;
-    margin-left: 0.2rem;
-    margin-bottom: 0.2rem;
-    width: 96%;
-}
-
-.bullet-points {
-    font-size: 1rem;
-    margin-left: 2rem;
-}
+    .main-container {
+        display: block;
+        max-width: 55rem;
+        width: 100%;
+        padding: 1rem;
+        margin-left: auto;
+        margin-right: auto;
+        min-height: 100%;
+        line-height: 1.5;
+        font-size: 2rem;
+    }
+    
+    .container {
+        float: right;
+        width: 100%;
+        margin-left: auto;
+        margin-right: auto;
+        min-height: 100%;
+        min-height: 50rem;
+    }
+    
+    input {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        height: 2rem;
+        margin-left: 0.2rem;
+        margin-bottom: 0.2rem;
+        width: 96%;
+    }
+    
+    h1 {
+        font-size: 2rem;
+    }
+    
+    form {
+        max-width: 1000px;
+        margin: 10px auto;
+        border: 1px solid #ccc;
+        padding: 20px;
+        box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+        border-radius: 3px;
+    }
+    
+    pre {
+        border: 1px solid #ccc;
+        background: rgba(0, 0, 0, 0.1);
+        box-shadow: inset 1px 1px 3px rgba(0, 0, 0, 0.2);
+        padding: 20px;
+    }
