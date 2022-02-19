@@ -12,7 +12,7 @@ const Skills = () => (
                     name="technicalSkill"
                     component="input"
                     type="text"
-                    placeholder="technical"
+                    placeholder="Technical"
                     />
                 </div>
                 <div>
