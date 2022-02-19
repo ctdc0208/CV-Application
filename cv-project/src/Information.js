@@ -29,7 +29,10 @@ class Information extends React.Component {
                     <Education />
                     <Skills />
                         <div className="buttons">
-                            <button type="submit" disabled={submitting || pristine}>
+                            <button 
+                            type="submit" 
+                            disabled={submitting || pristine}               
+                            >
                             Submit
                             </button>
                             <button

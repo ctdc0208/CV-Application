@@ -24,12 +24,15 @@
         flex-direction: column;
         justify-content: center;
         height: 2rem;
-        margin-left: 0.2rem;
+        margin-top: 0.2rem;
+        margin-left: 0.7rem;
         margin-bottom: 0.2rem;
         width: 96%;
+        border: 0.1rem solid black;
+        border-radius: 0.3rem;
     }
     
-    h1 {
+    label {
         font-size: 2rem;
     }
     
@@ -47,4 +50,20 @@
         background: rgba(0, 0, 0, 0.1);
         box-shadow: inset 1px 1px 3px rgba(0, 0, 0, 0.2);
         padding: 20px;
+    }
+    
+    .buttons {
+        display: flex;
+        flex-flow: row nowrap;
+        justify-content: center;
+        margin-top: 15px;
+    }
+    
+    button {
+        margin: 0 10px;
+        background-color: black;
+        color: white;
+        border-radius: 5px;
+        padding: 5px 15px;
+        font-size: 16px;
     }
