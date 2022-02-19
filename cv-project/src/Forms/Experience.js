@@ -20,7 +20,7 @@ const Experience = () => (
                     name="companyName"
                     component="input"
                     type="text"
-                    placeholder="Company Name"
+                    placeholder="Company"
                     />
                 </div>  
                 <div>
@@ -28,7 +28,7 @@ const Experience = () => (
                     name="startDateExperience"
                     component="input"
                     type="text"
-                    placeholder="Start Date"
+                    placeholder="From"
                     />
                 </div>
                 <div>
@@ -36,7 +36,7 @@ const Experience = () => (
                     name="endDateExperience"
                     component="input"
                     type="text"
-                    placeholder="End Date"
+                    placeholder="To"
                     />
                 </div>
 				<div>

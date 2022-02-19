@@ -9,18 +9,26 @@ const Education = () => (
                 <label>Experience</label>
                 <div>
                     <Field
-                    name="courseName"
+                    name="degree"
                     component="input"
                     type="text"
-                    placeholder="Course Name"
+                    placeholder="Degree"
                     />
                 </div>
                 <div>
                     <Field
-                    name="institutionName"
+                    name="university"
                     component="input"
                     type="text"
-                    placeholder="Institution Name"
+                    placeholder="University Name"
+                    />
+                </div> 
+                <div>
+                    <Field
+                    name="universityCity"
+                    component="input"
+                    type="text"
+                    placeholder="City"
                     />
                 </div>  
                 <div>
@@ -28,7 +36,7 @@ const Education = () => (
                     name="startDateEducation"
                     component="input"
                     type="text"
-                    placeholder="Start Date"
+                    placeholder="From"
                     />
                 </div>
                 <div>
@@ -36,7 +44,7 @@ const Education = () => (
                     name="endDateEducation"
                     component="input"
                     type="text"
-                    placeholder="End Date"
+                    placeholder="To"
                     />
                 </div>
             </div>

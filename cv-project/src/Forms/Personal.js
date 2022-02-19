@@ -18,6 +18,14 @@ const Personal = () => (
                 </div>
                 <div>
                     <Field
+                    name="title"
+                    component="input"
+                    type="text"
+                    placeholder="Title"
+                    />
+                </div>
+                <div>
+                    <Field
                     name="email"
                     component="input"
                     type="text"
