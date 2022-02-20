@@ -1,12 +1,15 @@
 /* eslint-disable jsx-a11y/accessible-emoji */
 import React from 'react'
 import { Field } from 'react-final-form'
-
+import { FieldArray } from 'react-final-form-arrays'
 
 const Education = () => (
   <React.Fragment>
-            <div>
-                <label>Experience</label>
+      <FieldArray name="education">
+              {({ fields }) =>
+              fields.map((name) => (
+            <div key={name}>
+                <label>Education</label>
                 <div>
                     <Field
                     name="degree"
@@ -48,6 +51,9 @@ const Education = () => (
                     />
                 </div>
             </div>
+         ))
+        }
+      </FieldArray>
    </React.Fragment>
 )
 
