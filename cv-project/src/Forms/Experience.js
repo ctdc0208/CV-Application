@@ -1,11 +1,14 @@
 /* eslint-disable jsx-a11y/accessible-emoji */
 import React from 'react'
 import { Field } from 'react-final-form'
-
+import { FieldArray } from 'react-final-form-arrays'
 
 const Experience = () => (
   <React.Fragment>
-            <div>
+        <FieldArray name="experience">
+              {({ fields }) =>
+              fields.map((name) => (
+            <div key={name}>
                 <label>Experience</label>
                 <div>
                     <Field
@@ -48,6 +51,9 @@ const Experience = () => (
                     />
                 </div>
             </div>
+         ))
+        }
+      </FieldArray>
    </React.Fragment>
 )
 

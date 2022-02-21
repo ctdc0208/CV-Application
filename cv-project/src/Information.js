@@ -6,7 +6,6 @@ import Education from './Forms/Education';
 import Skills from "./Forms/Skills";
 import { Form } from 'react-final-form';
 import arrayMutators from 'final-form-arrays'
-// to do redux-form
 
 const sleep = ms => new Promise(resolve => setTimeout(resolve, ms))
 
@@ -15,7 +14,7 @@ const onSubmit = async values => {
     window.alert(JSON.stringify(values, 0, 2))
   }
 
-class Information extends React.Component {    
+class Information extends React.Component {   
     render() {
         return (
             <div className="main-container">
@@ -25,25 +24,60 @@ class Information extends React.Component {
                     mutators={{
                         ...arrayMutators
                       }}
-                    initialValues={{}}
+                    initialValues={{
+                        "experience": [
+                            null
+                        ],
+                        "education": [
+                            null
+                        ],
+                        "skills": [
+                            null
+                        ],
+                    }}
                     render={({ handleSubmit, form: { mutators: { push, pop }}, form, submitting, pristine, values }) => (
                         <form onSubmit={handleSubmit}>
                     <Personal />
-                    <Experience />
-                    <Education />
-                    <div>   
-                        <button
-                        type="button"
-                        onClick={() => push('education', undefined)}
-                        >
-                        Add Education
-                        </button>
-                        <button type="button" onClick={() => pop('education')}>
-                        Remove Education
-                        </button>
+
+                    <div>
+                        <Experience />
+                            <button
+                            type="button"
+                            onClick={() => push('experience', undefined)}
+                            >
+                            Add Experience
+                            </button>
+                            <button type="button" onClick={() => pop('experience')}>
+                            Remove Experience
+                            </button>
+                    </div>
+
+                    <div>
+                        <Education />
+                            <button
+                            type="button"
+                            onClick={() => push('education', undefined)}
+                            >
+                            Add Education
+                            </button>
+                            <button type="button" onClick={() => pop('education')}>
+                            Remove Education
+                            </button>
                     </div>
                    
-                    <Skills />
+                    <div>
+                        <Skills />
+                            <button
+                            type="button"
+                            onClick={() => push('skills', undefined)}
+                            >
+                            Add Skills
+                            </button>
+                            <button type="button" onClick={() => pop('skills')}>
+                            Remove Skills
+                            </button>
+                    </div>
+
                         <div className="buttons">
                             <button 
                             type="submit" 
@@ -65,7 +99,7 @@ class Information extends React.Component {
                 />
                 </div>
             </div>
-        )
+        );
     }
 }
 
