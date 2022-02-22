@@ -7,12 +7,12 @@ const Experience = () => (
   <React.Fragment>
         <FieldArray name="experience">
               {({ fields }) =>
-              fields.map((name) => (
+              fields.map((name, index) => (
             <div key={name}>
-                <label>Experience</label>
+                <label>Experience #{index+1}</label>
                 <div>
                     <Field
-                    name="projectName"
+                    name={`${name}.projectName`}
                     component="input"
                     type="text"
                     placeholder="Project Name"
@@ -20,7 +20,7 @@ const Experience = () => (
                 </div>
                 <div>
                     <Field
-                    name="companyName"
+                    name={`${name}.companyName`}
                     component="input"
                     type="text"
                     placeholder="Company"
@@ -28,7 +28,7 @@ const Experience = () => (
                 </div>  
                 <div>
                     <Field
-                    name="startDateExperience"
+                    name={`${name}.startDateExperience`}
                     component="input"
                     type="text"
                     placeholder="From"
@@ -36,7 +36,7 @@ const Experience = () => (
                 </div>
                 <div>
                     <Field
-                    name="endDateExperience"
+                    name={`${name}.endDateExperience`}
                     component="input"
                     type="text"
                     placeholder="To"
@@ -44,7 +44,7 @@ const Experience = () => (
                 </div>
 				<div>
                     <Field
-                    name="experienceAcquired"
+                    name={`${name}.experienceAcquired`}
                     component="input"
                     type="text"
                     placeholder="Experience Acquired"

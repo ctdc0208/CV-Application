@@ -11,7 +11,7 @@ const Skills = () => (
                 <label>Skills</label>
                 <div>
                     <Field
-                    name="technicalSkill"
+                    name={`${name}.technicalSkill`}
                     component="input"
                     type="text"
                     placeholder="Technical"
@@ -19,7 +19,7 @@ const Skills = () => (
                 </div>
                 <div>
                     <Field
-                    name="softwareSkill"
+                    name={`${name}.softwareSkill`}
                     component="input"
                     type="text"
                     placeholder="Software"
@@ -27,7 +27,7 @@ const Skills = () => (
                 </div>  
                 <div>
                     <Field
-                    name="communicationSkill"
+                    name={`${name}.communicationSkill`}
                     component="input"
                     type="text"
                     placeholder="Communication"

@@ -1,16 +1,18 @@
 /* eslint-disable jsx-a11y/accessible-emoji */
 import React from 'react'
 import { Field } from 'react-final-form'
-
+import { FieldArray } from 'react-final-form-arrays'
 
 const Personal = () => (
   <React.Fragment>
-
+        <FieldArray name="personal">
+        {({ fields }) =>
+              fields.map((name) => (
             <div>
                 <label>Personal Information</label>
                 <div>
                     <Field
-                    name="name"
+                    name={`${name}.name`}
                     component="input"
                     type="text"
                     placeholder="Name"
@@ -18,7 +20,7 @@ const Personal = () => (
                 </div>
                 <div>
                     <Field
-                    name="title"
+                    name={`${name}.title`}
                     component="input"
                     type="text"
                     placeholder="Title"
@@ -26,7 +28,7 @@ const Personal = () => (
                 </div>
                 <div>
                     <Field
-                    name="email"
+                    name={`${name}.email`}
                     component="input"
                     type="text"
                     placeholder="Email"
@@ -34,7 +36,7 @@ const Personal = () => (
                 </div>  
                 <div>
                     <Field
-                    name="address"
+                    name={`${name}.address`}
                     component="input"
                     type="text"
                     placeholder="Address"
@@ -42,13 +44,16 @@ const Personal = () => (
                 </div>
                 <div>
                     <Field
-                    name="phoneNumber"
+                    name={`${name}.phoneNumber`}
                     component="input"
                     type="text"
                     placeholder="Phone Number"
                     />
                 </div>
             </div>
+            ))
+        }
+        </FieldArray>
    </React.Fragment>
 )
 

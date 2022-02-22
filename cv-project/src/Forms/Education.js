@@ -7,12 +7,12 @@ const Education = () => (
   <React.Fragment>
       <FieldArray name="education">
               {({ fields }) =>
-              fields.map((name) => (
+              fields.map((name, index) => (
             <div key={name}>
-                <label>Education</label>
+                <label>Education #{index+1}</label>
                 <div>
                     <Field
-                    name="degree"
+                    name={`${name}.degree`}
                     component="input"
                     type="text"
                     placeholder="Degree"
@@ -20,7 +20,7 @@ const Education = () => (
                 </div>
                 <div>
                     <Field
-                    name="university"
+                    name={`${name}.university`}
                     component="input"
                     type="text"
                     placeholder="University Name"
@@ -28,7 +28,7 @@ const Education = () => (
                 </div> 
                 <div>
                     <Field
-                    name="universityCity"
+                    name={`${name}.universityCity`}
                     component="input"
                     type="text"
                     placeholder="City"
@@ -36,7 +36,7 @@ const Education = () => (
                 </div>  
                 <div>
                     <Field
-                    name="startDateEducation"
+                    name={`${name}.startDateEducation`}
                     component="input"
                     type="text"
                     placeholder="From"
@@ -44,7 +44,7 @@ const Education = () => (
                 </div>
                 <div>
                     <Field
-                    name="endDateEducation"
+                    name={`${name}.endDateEducation`}
                     component="input"
                     type="text"
                     placeholder="To"

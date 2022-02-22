@@ -25,6 +25,9 @@ class Information extends React.Component {
                         ...arrayMutators
                       }}
                     initialValues={{
+                        "personal":[
+                            null
+                        ],
                         "experience": [
                             null
                         ],
@@ -50,6 +53,7 @@ class Information extends React.Component {
                             <button type="button" onClick={() => pop('experience')}>
                             Remove Experience
                             </button>
+
                     </div>
 
                     <div>
@@ -65,18 +69,9 @@ class Information extends React.Component {
                             </button>
                     </div>
                    
-                    <div>
+                    
                         <Skills />
-                            <button
-                            type="button"
-                            onClick={() => push('skills', undefined)}
-                            >
-                            Add Skills
-                            </button>
-                            <button type="button" onClick={() => pop('skills')}>
-                            Remove Skills
-                            </button>
-                    </div>
+                
 
                         <div className="buttons">
                             <button 
