@@ -3,6 +3,40 @@ import React from 'react'
 import { Field } from 'react-final-form'
 import { FieldArray } from 'react-final-form-arrays'
 
+const renderField = ({ input, label, type, meta: { touched, error } }) => (
+    <div>
+      <div>
+        <input {...input} type={type} placeholder={label} />
+      </div>
+    </div>
+  )
+
+
+const ExperienceAcquired = ({ fields, meta: { error } }) => (
+    <ul>
+      <li>
+        <button type="button" onClick={() => fields.push()}>
+          Add Experience Acquired
+        </button>
+      </li>
+      {fields.map((exp, index) => (
+        <li key={index}>
+          <Field
+            name={exp}
+            type="text"
+            component={renderField}
+            label={`Experienced #${index + 1}`}
+          />
+           <span
+            onClick={() => fields.remove(index)}
+          >
+              ❌
+          </span>
+        </li>
+      ))}
+    </ul>
+  )
+
 const Experience = () => (
   <React.Fragment>
         <FieldArray name="experience">
@@ -42,13 +76,16 @@ const Experience = () => (
                     placeholder="To"
                     />
                 </div>
-				<div>
-                    <Field
-                    name={`${name}.experienceAcquired`}
-                    component="input"
-                    type="text"
-                    placeholder="Experience Acquired"
-                    />
+                <div>
+                <FieldArray name={`${name}.experienceAcquired`} component={ExperienceAcquired} />
+                </div>
+                <div>
+                    <button
+                      onClick={() => fields.remove(index)}
+                      style={{ cursor: 'pointer' }}
+                    >
+                      Remove Experience
+                    </button>
                 </div>
             </div>
          ))
