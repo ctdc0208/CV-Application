@@ -38,8 +38,15 @@ class Information extends React.Component {
                             null
                         ],
                     }}
-                    render={({ handleSubmit, form: { mutators: { push, pop }}, form, submitting, pristine, values }) => (
+                    render={({ 
+                        handleSubmit, 
+                        form: { mutators: { push, pop }}, 
+                        form, 
+                        submitting, 
+                        pristine, 
+                        values }) => (
                         <form onSubmit={handleSubmit}>
+                            
                     <Personal />
 
                     <div>
@@ -50,10 +57,6 @@ class Information extends React.Component {
                             >
                             Add Experience
                             </button>
-                            <button type="button" onClick={() => pop('experience')}>
-                            Remove Experience
-                            </button>
-
                     </div>
 
                     <div>
@@ -63,9 +66,6 @@ class Information extends React.Component {
                             onClick={() => push('education', undefined)}
                             >
                             Add Education
-                            </button>
-                            <button type="button" onClick={() => pop('education')}>
-                            Remove Education
                             </button>
                     </div>
                    
@@ -88,7 +88,9 @@ class Information extends React.Component {
                             Reset
                             </button>
                         </div>
+                        
                         <pre>{JSON.stringify(values, 0, 2)}</pre>
+
                         </form>
                     )}
                 />
