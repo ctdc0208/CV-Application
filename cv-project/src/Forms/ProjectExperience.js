@@ -3,47 +3,39 @@ import React from 'react'
 import { Field } from 'react-final-form'
 import { FieldArray } from 'react-final-form-arrays'
 
-const renderField = ({ input, label, type, meta: { touched, error } }) => (
+const ProjectExperienceAcquired = ({ fields }) => (
+  <React.Fragment>
     <div>
-      <div>
-        <input {...input} type={type} placeholder={label} />
-      </div>
-    </div>
-  )
-
-
-const ExperienceAcquired = ({ fields, meta: { error } }) => (
-    <ul>
-      <li>
         <button type="button" onClick={() => fields.push()}>
-          Add Experience Acquired
+          Add Project Experience Acquired
         </button>
-      </li>
-      {fields.map((exp, index) => (
-        <li key={index}>
+    </div>
+    {fields.map((exp, index) => (
+        <div key={index}>
           <Field
-            name={exp}
+            name={`${exp}.projectExperienceAcquired`}
+            component="input"
             type="text"
-            component={renderField}
-            label={`Experienced #${index + 1}`}
+            placeholder={`Project Experienced #${index + 1}`}
+
           />
            <span
             onClick={() => fields.remove(index)}
           >
               ❌
           </span>
-        </li>
+        </div>
       ))}
-    </ul>
-  )
+  </React.Fragment>
+)
 
-const Experience = () => (
+const ProjectExperience = () => (
   <React.Fragment>
-        <FieldArray name="experience">
+        <FieldArray name="projectExperience">
               {({ fields }) =>
               fields.map((name, index) => (
             <div key={name}>
-                <label>Experience #{index+1}</label>
+                <label>Project Experience #{index+1}</label>
                 <div>
                     <Field
                     name={`${name}.projectName`}
@@ -54,15 +46,7 @@ const Experience = () => (
                 </div>
                 <div>
                     <Field
-                    name={`${name}.companyName`}
-                    component="input"
-                    type="text"
-                    placeholder="Company"
-                    />
-                </div>  
-                <div>
-                    <Field
-                    name={`${name}.startDateExperience`}
+                    name={`${name}.startDateProject`}
                     component="input"
                     type="text"
                     placeholder="From"
@@ -70,21 +54,21 @@ const Experience = () => (
                 </div>
                 <div>
                     <Field
-                    name={`${name}.endDateExperience`}
+                    name={`${name}.endDateProject`}
                     component="input"
                     type="text"
                     placeholder="To"
                     />
                 </div>
                 <div>
-                <FieldArray name={`${name}.experienceAcquired`} component={ExperienceAcquired} />
+                <FieldArray name={`${name}.projectExperienceAcquired`} component={ProjectExperienceAcquired} />
                 </div>
                 <div>
                     <button
                       onClick={() => fields.remove(index)}
                       style={{ cursor: 'pointer' }}
                     >
-                      Remove Experience
+                      Remove Project Experience
                     </button>
                 </div>
             </div>
@@ -94,6 +78,6 @@ const Experience = () => (
    </React.Fragment>
 )
 
-export default Experience
+export default ProjectExperience
 
 

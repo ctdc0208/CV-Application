@@ -1,7 +1,8 @@
 import React from "react";
 import './Information.css';
 import Personal from './Forms/Personal';
-import Experience from './Forms/Experience';
+import WorkExperience from './Forms/WorkExperience';
+import ProjectExperience from "./Forms/ProjectExperience";
 import Education from './Forms/Education';
 import Skills from "./Forms/Skills";
 import { Form } from 'react-final-form';
@@ -25,18 +26,23 @@ class Information extends React.Component {
                         ...arrayMutators
                       }}
                     initialValues={{
+
                         "personal":[
-                            null
-                        ],
-                        "experience": [
                             null
                         ],
                         "education": [
                             null
                         ],
+                        "projectExperience": [
+                            null
+                        ],
+                        "workExperience": [
+                            null
+                        ],
                         "skills": [
                             null
                         ],
+
                     }}
                     render={({ 
                         handleSubmit, 
@@ -50,16 +56,6 @@ class Information extends React.Component {
                     <Personal />
 
                     <div>
-                        <Experience />
-                            <button
-                            type="button"
-                            onClick={() => push('experience', undefined)}
-                            >
-                            Add Experience
-                            </button>
-                    </div>
-
-                    <div>
                         <Education />
                             <button
                             type="button"
@@ -68,11 +64,29 @@ class Information extends React.Component {
                             Add Education
                             </button>
                     </div>
-                   
-                    
-                        <Skills />
-                
 
+                    <div>
+                        <ProjectExperience />
+                            <button
+                            type="button"
+                            onClick={() => push('projectExperience', undefined)}
+                            >
+                            Add Project Experience
+                            </button>
+                    </div>
+
+                    <div>
+                        <WorkExperience />
+                            <button
+                            type="button"
+                            onClick={() => push('workExperience', undefined)}
+                            >
+                            Add Work Experience
+                            </button>
+                    </div>
+                                       
+                    <Skills />
+                
                         <div className="buttons">
                             <button 
                             type="submit" 
