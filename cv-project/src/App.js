@@ -3,14 +3,16 @@ import './App.css';
 import Header from './Header';
 import Information from './Information';
 import CVPreview from './CVPreview';
+import Footer from './Footer';
 
 class App extends Component {
     render() {
       return (
-        <div>
+        <div className='app'>
           <Header />
           <Information />
           <CVPreview />
+          <Footer />
         </div>
       )
     }
