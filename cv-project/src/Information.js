@@ -1,4 +1,6 @@
 import React from "react";
+import { Provider } from 'react-redux'
+import store from './store'
 import './Information.css';
 import Personal from './Forms/Personal';
 import WorkExperience from './Forms/WorkExperience';
@@ -7,6 +9,8 @@ import Education from './Forms/Education';
 import Skills from "./Forms/Skills";
 import { Form } from 'react-final-form';
 import arrayMutators from 'final-form-arrays'
+import FormStateToRedux from './FormStateToRedux'
+import FormStateFromRedux from './FormStateFromRedux'
 
 const sleep = ms => new Promise(resolve => setTimeout(resolve, ms))
 
@@ -18,6 +22,7 @@ const onSubmit = async values => {
 class Information extends React.Component {   
     render() {
         return (
+          <Provider store={store}>
             <div className="main-container">
                 <div className="container">
                 <Form 
@@ -190,6 +195,7 @@ class Information extends React.Component {
                         pristine, 
                         values }) => (
                         <form onSubmit={handleSubmit}>
+                          <FormStateToRedux form="example" />
                             
                     <Personal />
 
@@ -241,15 +247,19 @@ class Information extends React.Component {
                             </button>
                         </div>
                         
-                        <pre>{JSON.stringify(values, 0, 2)}</pre>
+                        <h3>Form State from Redux</h3>
+                        <FormStateFromRedux form="example" />
 
                         </form>
+                        
                     )}
                 />
                 </div>
             </div>
+            </Provider>
         );
     }
+    
 }
 
 export default Information
