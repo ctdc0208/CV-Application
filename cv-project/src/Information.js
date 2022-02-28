@@ -251,6 +251,8 @@ class Information extends React.Component {
                         </div>
                         
                         <pre>{JSON.stringify(values, 0, 2)}</pre>
+
+                        
                         </form>
                     )}
                 />
@@ -260,6 +262,7 @@ class Information extends React.Component {
     }
     
 }
+
 
 
 export default Information
