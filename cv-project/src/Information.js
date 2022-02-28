@@ -1,6 +1,4 @@
 import React from "react";
-import { Provider } from 'react-redux'
-import store from './store'
 import './Information.css';
 import Personal from './Forms/Personal';
 import WorkExperience from './Forms/WorkExperience';
@@ -9,8 +7,6 @@ import Education from './Forms/Education';
 import Skills from "./Forms/Skills";
 import { Form } from 'react-final-form';
 import arrayMutators from 'final-form-arrays'
-import FormStateToRedux from './FormStateToRedux'
-import FormStateFromRedux from './FormStateFromRedux'
 
 const sleep = ms => new Promise(resolve => setTimeout(resolve, ms))
 
@@ -22,7 +18,6 @@ const onSubmit = async values => {
 class Information extends React.Component {   
     render() {
         return (
-          <Provider store={store}>
             <div className="main-container">
                 <div className="container">
                 <Form 
@@ -31,9 +26,15 @@ class Information extends React.Component {
                         ...arrayMutators
                       }}
                     initialValues={{
-                        /*
+                        
                         "personal":[
-                            null
+                          {
+                            "name": "Bruce Wayne",
+                            "title": "EIT",
+                            "email": "Email",
+                            "address": "Address",
+                            "phoneNumber": "Phone Number"
+                          }
                         ],
                         "education": [
                             null
@@ -47,8 +48,8 @@ class Information extends React.Component {
                         "skills": [
                             null
                         ],
-                        */
                         
+                        /*
                             "personal": [
                               {
                                 "name": "Bruce Wayne",
@@ -185,6 +186,7 @@ class Information extends React.Component {
                                 "communicationSkill": "Technical Writing, Oral Presentation, Project Management"
                               }
                             ]
+                            */
                           
                     }}
                     render={({ 
@@ -195,7 +197,6 @@ class Information extends React.Component {
                         pristine, 
                         values }) => (
                         <form onSubmit={handleSubmit}>
-                          <FormStateToRedux form="example" />
                             
                     <Personal />
 
@@ -234,7 +235,8 @@ class Information extends React.Component {
                         <div className="buttons">
                             <button 
                             type="submit" 
-                            disabled={submitting || pristine}               
+                            disabled={submitting || pristine}  
+                            style={{ cursor: 'pointer' }}             
                             >
                             Submit
                             </button>
@@ -242,24 +244,22 @@ class Information extends React.Component {
                             type="button"
                             onClick={form.reset}
                             disabled={submitting || pristine}
+                            style={{ cursor: 'pointer' }}
                             >
                             Reset
                             </button>
                         </div>
                         
-                        <h3>Form State from Redux</h3>
-                        <FormStateFromRedux form="example" />
-
+                        <pre>{JSON.stringify(values, 0, 2)}</pre>
                         </form>
-                        
                     )}
                 />
                 </div>
             </div>
-            </Provider>
         );
     }
     
 }
+
 
 export default Information
