@@ -1,5 +1,4 @@
 import React from "react";
-import styled from "styled-components";
 import './Information.css';
 import Personal from './Forms/Personal';
 import WorkExperience from './Forms/WorkExperience';
@@ -32,13 +31,7 @@ class Information extends React.Component {
                     initialValues={{
                         
                         "personal":[
-                          {
-                            "name": "Bruce Wayne",
-                            "title": "EIT",
-                            "email": "Email",
-                            "address": "Address",
-                            "phoneNumber": "Phone Number"
-                          }
+                          null
                         ],
                         "education": [
                             null
