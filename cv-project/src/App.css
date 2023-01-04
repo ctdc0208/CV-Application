@@ -3,3 +3,16 @@
     display: grid;
     grid-template-rows: auto 1fr auto;
 }
+
+.app-container {
+    display: flex;
+    flex-direction: row;
+    width: calc(1232px + 2 * 20px);
+    margin-left: auto;
+    margin-right: auto;
+    padding-top: 20px;
+}
+
+button {
+    cursor: pointer;
+}
