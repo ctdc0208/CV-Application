@@ -1,0 +1,68 @@
+    .main-container {
+        width: 55rem;
+        line-height: 1.5;
+        font-size: 2rem;
+    }
+    
+    .container {}
+    
+    input {}
+    
+    label {
+        font-size: 2rem;
+    }
+    
+    form {
+        margin: 10px auto;
+        border: 1px solid #ccc;
+        padding: 20px;
+        margin-left: 20px;
+        border-radius: 3px;
+        border-style: none none none solid;
+    }
+    
+    pre {
+        border: 1px solid #ccc;
+        background: rgba(0, 0, 0, 0.1);
+        box-shadow: inset 1px 1px 3px rgba(0, 0, 0, 0.2);
+        padding: 20px;
+    }
+    
+    .buttons {
+        display: flex;
+        flex-flow: row nowrap;
+        justify-content: center;
+        margin-top: 15px;
+    }
+    
+    .main-container button {
+        margin: 0 10px;
+        background-color: black;
+        color: white;
+        border-radius: 5px;
+        padding: 5px 15px;
+        font-size: 16px;
+        width: 96%;
+    }
+    
+    .form-input-name {
+        font-size: 1rem;
+        margin: 0;
+    }
+    
+    .personal-form {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr 1fr;
+    }
+    
+    .personal-form div {
+        display: flex;
+    }
+    
+    .personal-form label {
+        grid-column: 1 / 3;
+        grid-row: 1 / 2;
+    }
+    
+    .personal-name {}

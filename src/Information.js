@@ -1,5 +1,5 @@
 import React from "react";
-import './Information.css';
+import './styles/Information.css';
 import Personal from './Forms/Personal';
 import WorkExperience from './Forms/WorkExperience';
 import ProjectExperience from "./Forms/ProjectExperience";

@@ -2,52 +2,54 @@
 import React from 'react'
 import { Field } from 'react-final-form'
 import { FieldArray } from 'react-final-form-arrays'
+import '../styles/Information.css';
 
 const Personal = () => (
   <React.Fragment>
         <FieldArray name="personal">
         {({ fields }) =>
               fields.map((name) => (
-            <div>
+            <div className='personal-form'>
                 <label>Personal Information</label>
                 <div>
+                    <div className='form-input-name'>Full Name</div>
                     <Field
                     name={`${name}.name`}
                     component="input"
                     type="text"
-                    placeholder="Name"
+                    className="personal-name"
                     />
                 </div>
                 <div>
+                     <div className='form-input-name'>Title</div>
                     <Field
                     name={`${name}.title`}
                     component="input"
                     type="text"
-                    placeholder="Title"
                     />
                 </div>
                 <div>
+                    <div className='form-input-name'>Email</div>
                     <Field
                     name={`${name}.email`}
                     component="input"
                     type="text"
-                    placeholder="Email"
                     />
                 </div>  
                 <div>
+                    <div className='form-input-name'>Address</div>
                     <Field
                     name={`${name}.address`}
                     component="input"
                     type="text"
-                    placeholder="Address"
                     />
                 </div>
                 <div>
+                    <div className='form-input-name'>Phone Number</div>
                     <Field
                     name={`${name}.phoneNumber`}
                     component="input"
                     type="text"
-                    placeholder="Phone Number"
                     />
                 </div>
             </div>
