@@ -9,7 +9,7 @@ const Personal = () => (
         <FieldArray name="personal">
         {({ fields }) =>
               fields.map((name) => (
-            <div className='personal-form'>
+            <div className='form'>
                 <label>Personal Information</label>
                 <div>
                     <div className='form-input-name'>Full Name</div>
@@ -17,7 +17,6 @@ const Personal = () => (
                     name={`${name}.name`}
                     component="input"
                     type="text"
-                    className="personal-name"
                     />
                 </div>
                 <div>

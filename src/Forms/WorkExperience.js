@@ -34,41 +34,41 @@ const WorkExperience = () => (
         <FieldArray name="workExperience">
               {({ fields }) =>
               fields.map((name, index) => (
-            <div key={name}>
+            <div key={name} className='form'>
                 <label>Work Experience #{index+1}</label>
                 <div>
+                    <div className='form-input-name'>Project Name</div>
                     <Field
                     name={`${name}.projectName`}
                     component="input"
                     type="text"
-                    placeholder="Project Name"
                     />
                 </div>
                 <div>
+                   <div className='form-input-name'>Company</div>
                     <Field
                     name={`${name}.companyName`}
                     component="input"
                     type="text"
-                    placeholder="Company"
                     />
                 </div>  
                 <div>
+                    <div className='form-input-name'>From</div>
                     <Field
                     name={`${name}.startDateExperience`}
                     component="input"
                     type="text"
-                    placeholder="From"
                     />
                 </div>
                 <div>
+                    <div className='form-input-name'>To</div>
                     <Field
                     name={`${name}.endDateExperience`}
                     component="input"
                     type="text"
-                    placeholder="To"
                     />
                 </div>
-                <div>
+                <div   className='form-bullet'>
                 <FieldArray name={`${name}.experienceAcquired`} component={WorkExperienceAcquired} />
                 </div>
                 <div>

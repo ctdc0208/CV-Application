@@ -7,30 +7,30 @@ const Skills = () => (
         <FieldArray name="skills">
               {({ fields }) =>
               fields.map((name) => (
-            <div key={name}>
+            <div key={name} className='form'>
                 <label>Skills</label>
                 <div>
+                <div className='form-input-name'>Technical</div>
                     <Field
                     name={`${name}.technicalSkill`}
                     component="input"
                     type="text"
-                    placeholder="Technical"
                     />
                 </div>
                 <div>
+                <div className='form-input-name'>Software</div>
                     <Field
                     name={`${name}.softwareSkill`}
                     component="input"
                     type="text"
-                    placeholder="Software"
                     />
                 </div>  
                 <div>
+                <div className='form-input-name'>Communication</div>
                     <Field
                     name={`${name}.communicationSkill`}
                     component="input"
                     type="text"
-                    placeholder="Communication"
                     />
                 </div>
             </div>

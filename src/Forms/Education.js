@@ -8,52 +8,52 @@ const Education = () => (
       <FieldArray name="education">
               {({ fields }) =>
               fields.map((name, index) => (
-            <div key={name}>
+            <div key={name} className='form'>
                 <label>Education #{index+1}</label>
                 <div>
+                    <div className='form-input-name'>Degree</div>
                     <Field
                     name={`${name}.degree`}
                     component="input"
                     type="text"
-                    placeholder="Degree"
+
                     />
                 </div>
                 <div>
+                    <div className='form-input-name'>University Name</div> 
                     <Field
                     name={`${name}.university`}
                     component="input"
                     type="text"
-                    placeholder="University Name"
                     />
                 </div> 
                 <div>
+                    <div className='form-input-name'>City</div>
                     <Field
                     name={`${name}.universityCity`}
                     component="input"
                     type="text"
-                    placeholder="City"
                     />
                 </div>  
                 <div>
+                    <div className='form-input-name'>From</div>
                     <Field
                     name={`${name}.startDateEducation`}
                     component="input"
                     type="text"
-                    placeholder="From"
                     />
                 </div>
                 <div>
+                    <div className='form-input-name'>To</div>
                     <Field
                     name={`${name}.endDateEducation`}
                     component="input"
                     type="text"
-                    placeholder="To"
                     />
                 </div>
-                <div>
+                <div className='button-form-remove'>
                     <button
                       onClick={() => fields.remove(index)}
-                      style={{ cursor: 'pointer' }}
                     >
                       Remove Education
                     </button>

@@ -12,12 +12,11 @@ const ProjectExperienceAcquired = ({ fields }) => (
     </div>
     {fields.map((exp, index) => (
         <div key={index}>
+          <div className='form-input-name'>{`Project Experienced #${index + 1}`}</div>
           <Field
             name={`${exp}.projectExperienceAcquired`}
             component="input"
             type="text"
-            placeholder={`Project Experienced #${index + 1}`}
-
           />
            <span
             onClick={() => fields.remove(index)}
@@ -34,36 +33,36 @@ const ProjectExperience = () => (
         <FieldArray name="projectExperience">
               {({ fields }) =>
               fields.map((name, index) => (
-            <div key={name}>
+            <div key={name} className='form'>
                 <label>Project Experience #{index+1}</label>
                 <div>
+                    <div className='form-input-name'>Project Name</div>
                     <Field
                     name={`${name}.projectName`}
                     component="input"
                     type="text"
-                    placeholder="Project Name"
                     />
                 </div>
                 <div>
+                    <div className='form-input-name'>From</div>
                     <Field
                     name={`${name}.startDateProject`}
                     component="input"
                     type="text"
-                    placeholder="From"
                     />
                 </div>
                 <div>
+                    <div className='form-input-name'>To</div>
                     <Field
                     name={`${name}.endDateProject`}
                     component="input"
                     type="text"
-                    placeholder="To"
                     />
                 </div>
-                <div>
+                <div  className='form-bullet'>
                 <FieldArray name={`${name}.projectExperienceAcquired`} component={ProjectExperienceAcquired} />
                 </div>
-                <div>
+                <div  className='button-form-remove'>
                     <button
                       onClick={() => fields.remove(index)}
                       style={{ cursor: 'pointer' }}

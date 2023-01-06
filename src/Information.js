@@ -218,7 +218,14 @@ class Information extends React.Component {
                     </div>
 
                     <div>
-                        <WorkExperience />
+                        <WorkExperience>
+                          <button
+                            type="button"
+                            onClick={() => push('workExperience', undefined)}
+                            >
+                            Add Work Experience
+                          </button>
+                        </WorkExperience>
                             <button
                             type="button"
                             onClick={() => push('workExperience', undefined)}
