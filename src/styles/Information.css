@@ -17,7 +17,6 @@
         border: 1px solid #ccc;
         padding: 20px;
         margin-left: 20px;
-        border-radius: 3px;
         border-style: none none none solid;
     }
     
@@ -53,11 +52,17 @@
     .personal-form {
         display: grid;
         grid-template-columns: 1fr 1fr;
-        grid-template-rows: 1fr 1fr;
+        grid-template-rows: 60px 1fr;
+        padding-bottom: 30px;
+        margin-bottom: 30px;
+        border: 1px solid #ccc;
+        border-style: none none solid none;
     }
     
     .personal-form div {
         display: flex;
+        flex-direction: column;
+        padding: 10px 20px 10px 0;
     }
     
     .personal-form label {
