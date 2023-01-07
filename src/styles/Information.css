@@ -1,18 +1,18 @@
     .main-container {
-        width: 55rem;
+        max-width: 100%;
         line-height: 1.5;
-        font-size: 2rem;
     }
     
     input {
         height: 2rem;
         margin-top: 0.2rem;
         margin-bottom: 0.2rem;
-        border: 2px solid black;
+        max-width: 100%;
+        border: 1px solid black;
     }
     
     label {
-        font-size: 2rem;
+        font-size: 1.5rem;
     }
     
     form {
@@ -58,8 +58,14 @@
         grid-template-rows: 60px 1fr;
         padding-bottom: 30px;
         margin-bottom: 30px;
+        max-width: 100%;
+        width: 100%;
+    }
+    
+    .form-top-border-divider {
         border: 1px solid #ccc;
-        border-style: none none solid none;
+        border-style: solid none none none;
+        margin: 50px 0 30px 0;
     }
     
     .form div {
@@ -93,4 +99,13 @@
         padding: 20px;
         margin-left: 20px;
         border-style: solid;
+    }
+    
+    .button-add-new-form {
+        grid-column: 1 / 2;
+        grid-row: 1/ 7;
+    }
+    
+    .margin-top-forms {
+        margin-top: 20px;
     }

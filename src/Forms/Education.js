@@ -8,7 +8,7 @@ const Education = () => (
       <FieldArray name="education">
               {({ fields }) =>
               fields.map((name, index) => (
-            <div key={name} className='form'>
+            <div key={name} className='form margin-top-forms'>
                 <label>Education #{index+1}</label>
                 <div>
                     <div className='form-input-name'>Degree</div>
@@ -16,7 +16,6 @@ const Education = () => (
                     name={`${name}.degree`}
                     component="input"
                     type="text"
-
                     />
                 </div>
                 <div>

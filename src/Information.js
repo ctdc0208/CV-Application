@@ -198,44 +198,48 @@ class Information extends React.Component {
                     <Personal />
 
                     <div>
+                        <div className="form-top-border-divider"></div>
                         <Education />
-                            <button
+                          <button
                             type="button"
                             onClick={() => push('education', undefined)}
                             >
                             Add Education
-                            </button>
+                          </button>
+                        
+                            
                     </div>
 
                     <div>
+                        <div className="form-top-border-divider"></div>
                         <ProjectExperience />
-                            <button
+                      
+                          <button
                             type="button"
                             onClick={() => push('projectExperience', undefined)}
                             >
                             Add Project Experience
-                            </button>
+                          </button>
+                      
                     </div>
 
                     <div>
-                        <WorkExperience>
-                          <button
-                            type="button"
-                            onClick={() => push('workExperience', undefined)}
-                            >
-                            Add Work Experience
-                          </button>
-                        </WorkExperience>
+                        <div className="form-top-border-divider"></div>
+                        <WorkExperience />
+                        
                             <button
                             type="button"
                             onClick={() => push('workExperience', undefined)}
                             >
                             Add Work Experience
                             </button>
+                            
                     </div>
-                                       
-                    <Skills />
-                
+
+                    <div>   
+                      <div className="form-top-border-divider"></div>        
+                      <Skills />
+                    </div>
                         <div className="buttons">
                             <button 
                             type="submit" 
@@ -259,6 +263,8 @@ class Information extends React.Component {
                         <pre>{
                          JSON.stringify(values, 0, 2)
                         }</pre>
+                        {/* Use redux to export JSON */}
+
           
                         </form>
                     )}

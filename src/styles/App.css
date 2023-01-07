@@ -5,9 +5,10 @@
 }
 
 .app-container {
-    display: flex;
-    flex-direction: row;
-    max-width: calc(1232px + 2 * 20px);
+    display: grid;
+    grid-template-columns: 1fr 3fr;
+    grid-template-rows: 1fr;
+    width: calc(1200px + 2 * 20px);
     margin-left: auto;
     margin-right: auto;
     padding-top: 20px;
