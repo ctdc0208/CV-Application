@@ -11,7 +11,7 @@ const ProjectExperienceAcquired = ({ fields }) => (
         </button>
     </div>
     {fields.map((exp, index) => (
-        <div key={index} >
+        <div key={index}>
           <div className='form-input-name'>{`Project Experienced #${index + 1}`}</div>
           <Field
             name={`${exp}.projectExperienceAcquired`}
@@ -33,7 +33,7 @@ const ProjectExperience = () => (
         <FieldArray name="projectExperience">
               {({ fields }) =>
               fields.map((name, index) => (
-            <div key={name} className='form margin-top-forms'>
+            <div key={name} className='form margin-top-forms' id="project-experience">
                 <label>Project Experience #{index+1}</label>
                 <div>
                     <div className='form-input-name'>Project Name</div>

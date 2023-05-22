@@ -34,7 +34,7 @@ const WorkExperience = () => (
         <FieldArray name="workExperience">
               {({ fields }) =>
               fields.map((name, index) => (
-            <div key={name} className='form margin-top-forms'>
+            <div key={name} className='form margin-top-forms' id="work-experience">
                 <label>Work Experience #{index+1}</label>
                 <div>
                     <div className='form-input-name'>Project Name</div>
