@@ -210,18 +210,6 @@ class Information extends React.Component {
                             
                     </div>
 
-                    <div>
-                        <div className="form-top-border-divider"></div>
-                        <ProjectExperience />
-                      
-                          <button
-                            type="button"
-                            onClick={() => push('projectExperience', undefined)}
-                            >
-                            Add Project Experience
-                          </button>
-                      
-                    </div>
 
                     <div>
                         <div className="form-top-border-divider"></div>
@@ -236,6 +224,19 @@ class Information extends React.Component {
                             
                     </div>
 
+                    <div>
+                        <div className="form-top-border-divider"></div>
+                        <ProjectExperience />
+                      
+                          <button
+                            type="button"
+                            onClick={() => push('projectExperience', undefined)}
+                            >
+                            Add Project Experience
+                          </button>
+                      
+                    </div>
+                    
                     <div>   
                       <div className="form-top-border-divider"></div>        
                       <Skills />
