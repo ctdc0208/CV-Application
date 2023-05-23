@@ -6,13 +6,13 @@ const Skills = () => (
   <React.Fragment>
         <FieldArray name="skills">
               {({ fields }) =>
-              fields.map((name) => (
-            <div key={name} className='form margin-top-forms' id="skills">
+              fields.map((skills) => (
+            <div key={skills} className='form margin-top-forms' id="skills">
                 <label>Skills</label>
                 <div>
                 <div className='form-input-name'>Technical</div>
                     <Field
-                    name={`${name}.technicalSkill`}
+                    name={`${skills}.technicalSkill`}
                     component="input"
                     type="text"
                     />
@@ -20,7 +20,7 @@ const Skills = () => (
                 <div>
                 <div className='form-input-name'>Software</div>
                     <Field
-                    name={`${name}.softwareSkill`}
+                    name={`${skills}.softwareSkill`}
                     component="input"
                     type="text"
                     />
@@ -28,7 +28,7 @@ const Skills = () => (
                 <div>
                 <div className='form-input-name'>Communication</div>
                     <Field
-                    name={`${name}.communicationSkill`}
+                    name={`${skills}.communicationSkill`}
                     component="input"
                     type="text"
                     />

@@ -7,13 +7,13 @@ const Education = () => (
   <React.Fragment>
       <FieldArray name="education">
               {({ fields }) =>
-              fields.map((name, index) => (
-            <div key={name} className='form margin-top-forms' id="education">
+              fields.map((education, index) => (
+            <div key={education} className='form margin-top-forms' id="education">
                 <label>Education #{index+1}</label>
                 <div>
                     <div className='form-input-name'>Degree</div>
                     <Field
-                    name={`${name}.degree`}
+                    name={`${education}.degree`}
                     component="input"
                     type="text"
                     />
@@ -21,7 +21,7 @@ const Education = () => (
                 <div>
                     <div className='form-input-name'>University Name</div> 
                     <Field
-                    name={`${name}.university`}
+                    name={`${education}.university`}
                     component="input"
                     type="text"
                     />
@@ -29,7 +29,7 @@ const Education = () => (
                 <div>
                     <div className='form-input-name'>City</div>
                     <Field
-                    name={`${name}.universityCity`}
+                    name={`${education}.universityCity`}
                     component="input"
                     type="text"
                     />
@@ -37,7 +37,7 @@ const Education = () => (
                 <div>
                     <div className='form-input-name'>From</div>
                     <Field
-                    name={`${name}.startDateEducation`}
+                    name={`${education}.startDateEducation`}
                     component="input"
                     type="text"
                     />
@@ -45,7 +45,7 @@ const Education = () => (
                 <div>
                     <div className='form-input-name'>To</div>
                     <Field
-                    name={`${name}.endDateEducation`}
+                    name={`${education}.endDateEducation`}
                     component="input"
                     type="text"
                     />

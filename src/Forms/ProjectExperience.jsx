@@ -32,13 +32,13 @@ const ProjectExperience = () => (
   <React.Fragment>
         <FieldArray name="projectExperience">
               {({ fields }) =>
-              fields.map((name, index) => (
-            <div key={name} className='form margin-top-forms' id="project-experience">
+              fields.map((projectExperience, index) => (
+            <div key={projectExperience} className='form margin-top-forms' id="project-experience">
                 <label>Project Experience #{index+1}</label>
                 <div>
                     <div className='form-input-name'>Project Name</div>
                     <Field
-                    name={`${name}.projectName`}
+                    name={`${projectExperience}.projectName`}
                     component="input"
                     type="text"
                     />
@@ -46,7 +46,7 @@ const ProjectExperience = () => (
                 <div>
                     <div className='form-input-name'>From</div>
                     <Field
-                    name={`${name}.startDateProject`}
+                    name={`${projectExperience}.startDateProject`}
                     component="input"
                     type="text"
                     />
@@ -54,13 +54,13 @@ const ProjectExperience = () => (
                 <div>
                     <div className='form-input-name'>To</div>
                     <Field
-                    name={`${name}.endDateProject`}
+                    name={`${projectExperience}.endDateProject`}
                     component="input"
                     type="text"
                     />
                 </div>
                 <div  className='form-bullet'>
-                <FieldArray name={`${name}.projectExperienceAcquired`} component={ProjectExperienceAcquired} />
+                <FieldArray name={`${projectExperience}.projectExperienceAcquired`} component={ProjectExperienceAcquired} />
                 </div>
                 <div  className='button-form-remove'>
                     <button

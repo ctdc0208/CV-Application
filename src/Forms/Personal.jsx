@@ -8,13 +8,13 @@ const Personal = () => (
   <React.Fragment>
         <FieldArray name="personal">
         {({ fields }) =>
-              fields.map((name) => (
-            <div className='form' id="personal">
+              fields.map((personal) => (
+            <div key={personal} className='form' id="personal">
                 <label>Personal Information</label>
                 <div>
                     <div className='form-input-name'>Full Name</div>
                     <Field
-                    name={`${name}.name`}
+                    name={`${personal}.name`}
                     component="input"
                     type="text"
                     />
@@ -22,7 +22,7 @@ const Personal = () => (
                 <div>
                      <div className='form-input-name'>Title</div>
                     <Field
-                    name={`${name}.title`}
+                    name={`${personal}.title`}
                     component="input"
                     type="text"
                     />
@@ -30,7 +30,7 @@ const Personal = () => (
                 <div>
                     <div className='form-input-name'>Email</div>
                     <Field
-                    name={`${name}.email`}
+                    name={`${personal}.email`}
                     component="input"
                     type="text"
                     />
@@ -38,7 +38,7 @@ const Personal = () => (
                 <div>
                     <div className='form-input-name'>Address</div>
                     <Field
-                    name={`${name}.address`}
+                    name={`${personal}.address`}
                     component="input"
                     type="text"
                     />
@@ -46,7 +46,7 @@ const Personal = () => (
                 <div>
                     <div className='form-input-name'>Phone Number</div>
                     <Field
-                    name={`${name}.phoneNumber`}
+                    name={`${personal}.phoneNumber`}
                     component="input"
                     type="text"
                     />

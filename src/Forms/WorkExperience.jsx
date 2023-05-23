@@ -33,13 +33,13 @@ const WorkExperience = () => (
   <React.Fragment>
         <FieldArray name="workExperience">
               {({ fields }) =>
-              fields.map((name, index) => (
-            <div key={name} className='form margin-top-forms' id="work-experience">
+              fields.map((workExperience, index) => (
+            <div key={workExperience} className='form margin-top-forms' id="work-experience">
                 <label>Work Experience #{index+1}</label>
                 <div>
                     <div className='form-input-name'>Project Name</div>
                     <Field
-                    name={`${name}.projectName`}
+                    name={`${workExperience}.projectName`}
                     component="input"
                     type="text"
                     />
@@ -47,7 +47,7 @@ const WorkExperience = () => (
                 <div>
                    <div className='form-input-name'>Company</div>
                     <Field
-                    name={`${name}.companyName`}
+                    name={`${workExperience}.companyName`}
                     component="input"
                     type="text"
                     />
@@ -55,7 +55,7 @@ const WorkExperience = () => (
                 <div>
                     <div className='form-input-name'>From</div>
                     <Field
-                    name={`${name}.startDateExperience`}
+                    name={`${workExperience}.startDateExperience`}
                     component="input"
                     type="text"
                     />
@@ -63,13 +63,13 @@ const WorkExperience = () => (
                 <div>
                     <div className='form-input-name'>To</div>
                     <Field
-                    name={`${name}.endDateExperience`}
+                    name={`${workExperience}.endDateExperience`}
                     component="input"
                     type="text"
                     />
                 </div>
                 <div   className='form-bullet'>
-                <FieldArray name={`${name}.experienceAcquired`} component={WorkExperienceAcquired} />
+                <FieldArray name={`${workExperience}.experienceAcquired`} component={WorkExperienceAcquired} />
                 </div>
                 <div>
                     <button
