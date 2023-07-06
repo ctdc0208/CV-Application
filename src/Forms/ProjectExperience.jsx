@@ -6,17 +6,17 @@ import { FieldArray } from 'react-final-form-arrays'
 const ProjectExperienceAcquired = ({ fields }) => (
   <React.Fragment>
     <div>
-        <button type="button" onClick={() => fields.push()}>
-          Add Project Experience Acquired
+        <button className="button-add-experience-acquired" type="button" onClick={() => fields.push()}>
+          Add Experience
         </button>
     </div>
     {fields.map((exp, index) => (
-        <div key={index}>
-          <div className='form-input-name'>{`Project Experienced #${index + 1}`}</div>
+        <div key={index} className="experiences-acquired">
           <Field
             name={`${exp}.projectExperienceAcquired`}
             component="input"
             type="text"
+            placeholder={`Project Experience # ${index + 1}`}
           />
            <span
             onClick={() => fields.remove(index)}
