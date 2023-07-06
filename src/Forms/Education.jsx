@@ -2,6 +2,7 @@
 import React from 'react'
 import { Field } from 'react-final-form'
 import { FieldArray } from 'react-final-form-arrays'
+import '../styles/Information.css';
 
 const Education = () => (
   <React.Fragment>
@@ -50,12 +51,14 @@ const Education = () => (
                     type="text"
                     />
                 </div>
-                <div className='button-form-remove'>
+                <div className='button-form-remove-container'>
                     <button
+                      className='button-form-remove'
                       onClick={() => fields.remove(index)}
                     >
-                      Remove Education
+                      Remove
                     </button>
+                    <div class="button-divider"></div>
                 </div>
             </div>
          ))

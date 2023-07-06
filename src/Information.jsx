@@ -67,7 +67,6 @@ class Information extends React.Component {
                             >
                             Add Education
                           </button>
-                        
                             
                     </div>
 
@@ -95,7 +94,7 @@ class Information extends React.Component {
                             >
                             Add Project Experience
                           </button>
-                      
+                          
                     </div>
                     
                     <div>   

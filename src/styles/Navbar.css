@@ -12,18 +12,20 @@
 }
 
 .navbar-container button {
-    border: 1px black;
+    border: none;
     font-size: 1.5rem;
     color: black;
     text-align: left;
     vertical-align: middle;
     height: 50px;
-    font-family: arial;
 }
 
 .navbar-active {
-    background-color: aqua;
-    color: white;
+    border-left: 3px solid aqua;
+}
+
+.navbar-sticky a button {
+    background-color: transparent;
 }
 
 @media (prefers-reduced-motion: no-preference) {

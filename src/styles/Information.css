@@ -9,6 +9,14 @@
         margin-bottom: 0.2rem;
         max-width: 100%;
         border: 1px solid black;
+        border-radius: 5px;
+        box-shadow: 0px -5px 5px 0px rgba(0, 0, 0, 0.1) inset;
+        -webkit-box-shadow: 0px -5px 5px 0px rgba(0, 0, 0, 0.1) inset;
+        -moz-box-shadow: 0px -5px 5px 0px rgba(0, 0, 0, 0.1) inset;
+    }
+    
+    input:active {
+        background-color: white;
     }
     
     label {
@@ -17,8 +25,8 @@
     
     form {
         margin: 10px auto;
-        border: 1px solid #ccc;
-        padding: 20px;
+        border: 3px solid #ccc;
+        padding: 20px 20px 20px 20px;
         margin-left: 20px;
         border-style: none none none solid;
     }
@@ -38,13 +46,11 @@
     }
     
     .main-container button {
-        margin: 0 10px;
         background-color: black;
         color: white;
         border-radius: 5px;
         padding: 5px 15px;
         font-size: 16px;
-        width: 96%;
     }
     
     .form-input-name {
@@ -56,14 +62,13 @@
         display: grid;
         grid-template-columns: 1fr 1fr;
         grid-template-rows: 60px 1fr;
-        padding-bottom: 30px;
         margin-bottom: 30px;
         max-width: 100%;
         width: 100%;
     }
     
     .form-top-border-divider {
-        border: 1px solid #ccc;
+        border: 3px solid #ccc;
         border-style: solid none none none;
         margin: 50px 0 30px 0;
     }
@@ -71,7 +76,7 @@
     .form div {
         display: flex;
         flex-direction: column;
-        padding: 10px 20px 10px 0;
+        padding: 5px 20px 0 0;
     }
     
     .form label {
@@ -79,9 +84,20 @@
         grid-row: 1 / 2;
     }
     
-    .button-form-remove {
-        grid-column: 1 / 2;
+    .button-divider {
+        border: 1px solid #ccc;
+        border-style: solid none none none;
+        margin: 10px 0 10px 0;
+    }
+    
+    .button-form-remove-container {
+        grid-column: 1 / 3;
         grid-row: 5 / 6;
+        margin-top: 10px;
+    }
+    
+    .button-form-remove {
+        width: 100px;
     }
     
     .form-bullet {

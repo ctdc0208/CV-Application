@@ -62,13 +62,15 @@ const ProjectExperience = () => (
                 <div  className='form-bullet'>
                 <FieldArray name={`${projectExperience}.projectExperienceAcquired`} component={ProjectExperienceAcquired} />
                 </div>
-                <div  className='button-form-remove'>
+                <div  className='button-form-remove-container'>
                     <button
+                      className='button-form-remove'
                       onClick={() => fields.remove(index)}
                       style={{ cursor: 'pointer' }}
                     >
-                      Remove Project Experience
+                      Remove
                     </button>
+                    <div class="button-divider"></div>
                 </div>
             </div>
          ))
