@@ -58,7 +58,7 @@ const Education = () => (
                     >
                       Remove
                     </button>
-                    <div class="button-divider"></div>
+                    <div className="button-divider"></div>
                 </div>
             </div>
          ))
