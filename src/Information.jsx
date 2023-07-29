@@ -6,7 +6,11 @@ import ProjectExperience from "./Forms/ProjectExperience";
 import Education from './Forms/Education';
 import Skills from "./Forms/Skills";
 import { Form } from 'react-final-form';
-import arrayMutators from 'final-form-arrays'
+import arrayMutators from 'final-form-arrays';
+import { Provider } from "react-redux";
+import store from "./Redux/store";
+import FormStatetoRedux from "./Redux/FormStatetoRedux";
+import FormStateFromRedux from "./Redux/FormStateFromRedux";
 
 const sleep = ms => new Promise(resolve => setTimeout(resolve, ms))
 
@@ -21,6 +25,7 @@ const onSubmit = async values => {
 class Information extends React.Component {   
     render() {
         return (
+            <Provider store={store}>
             <div className="main-container">
                 <div className="container">
                 <Form 
@@ -55,7 +60,9 @@ class Information extends React.Component {
                         pristine,
                         values }) => (
                         <form onSubmit={handleSubmit}>
-                            
+
+                    <FormStatetoRedux form="example" />
+
                     <Personal/>
 
                     <div>
@@ -119,12 +126,13 @@ class Information extends React.Component {
                             </button>
                         </div>
 
-
-                        
+                        <FormStateFromRedux form="example" />
+                        {/*
                         <pre>{
                          JSON.stringify(values, 0, 2)
                         }</pre>
-                        {/* Use redux to export JSON */}
+                    */}
+                    
 
           
                         </form>
@@ -132,9 +140,10 @@ class Information extends React.Component {
                 />
                 </div>
             </div>
+        </Provider>
         );
     }
+    
 }
-
 
 export default Information
