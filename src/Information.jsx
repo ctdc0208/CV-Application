@@ -19,12 +19,13 @@ const onSubmit = async values => {
     window.alert(JSON.stringify(values, 0, 2))
     const data = JSON.stringify(values, 0, 2);
     const parsedata = JSON.parse(data)
-    console.log(parsedata.personal[0].name)
+    console.log(parsedata)
 }
 
 class Information extends React.Component {   
     render() {
         return (
+            <div>
             <Provider store={store}>
             <div className="main-container">
                 <div className="container">
@@ -125,22 +126,16 @@ class Information extends React.Component {
                             Reset
                             </button>
                         </div>
-
-                        <FormStateFromRedux form="example" />
                         {/*
-                        <pre>{
-                         JSON.stringify(values, 0, 2)
-                        }</pre>
-                    */}
-                    
-
-          
+                            <FormStateFromRedux form="example" />
+                        */}
                         </form>
                     )}
                 />
                 </div>
             </div>
-        </Provider>
+            </Provider>
+        </div>
         );
     }
     

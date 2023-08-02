@@ -1,0 +1,16 @@
+    .preview-container {
+        grid-column: 3 / 4;
+        grid-row: 1 / 2;
+        display: flex;
+        justify-content: center;
+    }
+    
+    .preview-container-child {
+        position: -webkit-sticky;
+        position: sticky;
+        margin-top: 30px;
+        top: 50px;
+        height: 816.75px;
+        width: 577.5px;
+        background-color: beige;
+    }

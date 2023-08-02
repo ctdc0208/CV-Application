@@ -3,8 +3,8 @@ import './styles/App.css';
 import Header from './Header';
 import Navbar from './Navbar';
 import Information from './Information';
-import CVPreview from './CVPreview';
 import Footer from './Footer';
+import CVpreview from './CVPreview';
 
 class App extends Component {
     render() {
@@ -14,8 +14,8 @@ class App extends Component {
           <div className='app-container'>
             <Navbar />
             <Information />
+            <CVpreview />
           </div>
-          <CVPreview />
           <Footer />
         </div>
       )

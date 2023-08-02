@@ -20,7 +20,12 @@
     }
     
     label {
+        border: none;
         font-size: 1.5rem;
+        color: black;
+        display: flex;
+        align-items: center;
+        height: 50px;
     }
     
     form {
@@ -54,9 +59,8 @@
     }
     
     .form {
-        display: grid;
-        grid-template-columns: 1fr 1fr;
-        grid-template-rows: 60px 1fr;
+        display: flex;
+        flex-direction: column;
         margin-bottom: 30px;
         max-width: 100%;
         width: 100%;
@@ -72,11 +76,6 @@
         display: flex;
         flex-direction: column;
         margin: 5px 20px 0 0;
-    }
-    
-    .form label {
-        grid-column: 1 / 3;
-        grid-row: 1 / 2;
     }
     
     .button-divider {
