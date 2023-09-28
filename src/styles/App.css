@@ -6,9 +6,10 @@
 
 .app-container {
     display: grid;
-    grid-template-columns: 1fr 2fr 2fr;
+    grid-template-columns: 348px 696px 696px;
     grid-template-rows: 1fr;
-    width: calc(1700px + 2 * 20px);
+    width: 1740px;
+    max-width: 100%;
     margin-left: auto;
     margin-right: auto;
     padding-top: 20px;
