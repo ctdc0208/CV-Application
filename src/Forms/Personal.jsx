@@ -11,7 +11,7 @@ const Personal = () => (
               fields.map((personal) => (
             <div key={personal} className='form' id="personal">
                 <label>Personal Information</label>
-                <div>
+                <div className='personal-name'>
                     <div className='form-input-name'>Full Name</div>
                     <Field
                     name={`${personal}.name`}
@@ -19,6 +19,14 @@ const Personal = () => (
                     type="text"
                     />
                 </div>
+                <div>
+                    <div className='form-input-name'>Email Address</div>
+                    <Field
+                    name={`${personal}.email`}
+                    component="input"
+                    type="text"
+                    />
+                </div>  
                 <div>
                      <div className='form-input-name'>Title</div>
                     <Field
@@ -28,25 +36,17 @@ const Personal = () => (
                     />
                 </div>
                 <div>
-                    <div className='form-input-name'>Email</div>
+                    <div className='form-input-name'>Phone Number</div>
                     <Field
-                    name={`${personal}.email`}
-                    component="input"
-                    type="text"
-                    />
-                </div>  
-                <div>
-                    <div className='form-input-name'>Address</div>
-                    <Field
-                    name={`${personal}.address`}
+                    name={`${personal}.phoneNumber`}
                     component="input"
                     type="text"
                     />
                 </div>
-                <div>
-                    <div className='form-input-name'>Phone Number</div>
+                <div className='personal-address'>
+                    <div className='form-input-name'>Address</div>
                     <Field
-                    name={`${personal}.phoneNumber`}
+                    name={`${personal}.address`}
                     component="input"
                     type="text"
                     />
