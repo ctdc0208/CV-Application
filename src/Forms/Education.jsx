@@ -9,10 +9,10 @@ const Education = () => (
       <FieldArray name="education">
               {({ fields }) =>
               fields.map((education, index) => (
-            <div key={education} className='form margin-top-forms' id="education">
+            <div key={education} className='form margin-top-forms two-column' id="education">
                 <label>Education # {index+1}</label>
-                <div>
-                    <div className='form-input-name'>Degree</div>
+                <div className='two-column-one-two-column'>
+                    <div className='form-input-name'>Course Name</div>
                     <Field
                     name={`${education}.degree`}
                     component="input"
@@ -20,13 +20,29 @@ const Education = () => (
                     />
                 </div>
                 <div>
-                    <div className='form-input-name'>University Name</div> 
+                    <div className='form-input-name'>Institution Name</div> 
                     <Field
                     name={`${education}.university`}
                     component="input"
                     type="text"
                     />
                 </div> 
+                <div>
+                    <div className='form-input-name'>Stard Date</div>
+                    <Field
+                    name={`${education}.startDateEducation`}
+                    component="input"
+                    type="text"
+                    />
+                </div>
+                <div>
+                    <div className='form-input-name'>End Date</div>
+                    <Field
+                    name={`${education}.endDateEducation`}
+                    component="input"
+                    type="text"
+                    />
+                </div>
                 <div>
                     <div className='form-input-name'>City</div>
                     <Field
@@ -35,22 +51,6 @@ const Education = () => (
                     type="text"
                     />
                 </div>  
-                <div>
-                    <div className='form-input-name'>From</div>
-                    <Field
-                    name={`${education}.startDateEducation`}
-                    component="input"
-                    type="text"
-                    />
-                </div>
-                <div>
-                    <div className='form-input-name'>To</div>
-                    <Field
-                    name={`${education}.endDateEducation`}
-                    component="input"
-                    type="text"
-                    />
-                </div>
                 <div className='button-form-remove-container'>
                     <button
                       className='button-form-remove'

@@ -33,9 +33,9 @@ const ProjectExperience = () => (
         <FieldArray name="projectExperience">
               {({ fields }) =>
               fields.map((projectExperience, index) => (
-            <div key={projectExperience} className='form margin-top-forms' id="project-experience">
+            <div key={projectExperience} className='form margin-top-forms two-column' id="project-experience">
                 <label>Project Experience #{index+1}</label>
-                <div>
+                <div className='two-column-one-three-column'>
                     <div className='form-input-name'>Project Name</div>
                     <Field
                     name={`${projectExperience}.projectName`}
@@ -44,7 +44,7 @@ const ProjectExperience = () => (
                     />
                 </div>
                 <div>
-                    <div className='form-input-name'>From</div>
+                    <div className='form-input-name'>Start Date</div>
                     <Field
                     name={`${projectExperience}.startDateProject`}
                     component="input"
@@ -52,7 +52,7 @@ const ProjectExperience = () => (
                     />
                 </div>
                 <div>
-                    <div className='form-input-name'>To</div>
+                    <div className='form-input-name'>End Date</div>
                     <Field
                     name={`${projectExperience}.endDateProject`}
                     component="input"

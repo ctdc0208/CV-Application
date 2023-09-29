@@ -9,9 +9,9 @@ const Personal = () => (
         <FieldArray name="personal">
         {({ fields }) =>
               fields.map((personal) => (
-            <div key={personal} className='form' id="personal">
+            <div key={personal} className='form two-column' id="personal">
                 <label>Personal Information</label>
-                <div className='personal-name'>
+                <div className='two-column-one-two-column font-weight-700'>
                     <div className='form-input-name'>Full Name</div>
                     <Field
                     name={`${personal}.name`}
@@ -43,7 +43,7 @@ const Personal = () => (
                     type="text"
                     />
                 </div>
-                <div className='personal-address'>
+                <div className='two-column-one-three-column'>
                     <div className='form-input-name'>Address</div>
                     <Field
                     name={`${personal}.address`}

@@ -126,9 +126,9 @@ class Information extends React.Component {
                             Reset
                             </button>
                         </div>
-                        {/*
+
                             <FormStateFromRedux form="example" />
-                        */}
+                        
                         </form>
                     )}
                 />
