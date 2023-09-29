@@ -36,7 +36,7 @@ const ProjectExperience = () => (
             <div key={projectExperience} className='form margin-top-forms two-column' id="project-experience">
                 <label>Project Experience #{index+1}</label>
                 <div className='two-column-one-three-column'>
-                    <div className='form-input-name'>Project Name</div>
+                    <div className='form-input-name font-weight-700'>Project Name</div>
                     <Field
                     name={`${projectExperience}.projectName`}
                     component="input"
@@ -44,7 +44,7 @@ const ProjectExperience = () => (
                     />
                 </div>
                 <div>
-                    <div className='form-input-name'>Start Date</div>
+                    <div className='form-input-name font-weight-700'>Start Date</div>
                     <Field
                     name={`${projectExperience}.startDateProject`}
                     component="input"
@@ -52,7 +52,7 @@ const ProjectExperience = () => (
                     />
                 </div>
                 <div>
-                    <div className='form-input-name'>End Date</div>
+                    <div className='form-input-name font-weight-700'>End Date</div>
                     <Field
                     name={`${projectExperience}.endDateProject`}
                     component="input"

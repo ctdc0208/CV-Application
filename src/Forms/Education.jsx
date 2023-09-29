@@ -12,7 +12,7 @@ const Education = () => (
             <div key={education} className='form margin-top-forms two-column' id="education">
                 <label>Education # {index+1}</label>
                 <div className='two-column-one-two-column'>
-                    <div className='form-input-name'>Course Name</div>
+                    <div className='form-input-name font-weight-700'>Course Name</div>
                     <Field
                     name={`${education}.degree`}
                     component="input"
@@ -20,7 +20,7 @@ const Education = () => (
                     />
                 </div>
                 <div>
-                    <div className='form-input-name'>Institution Name</div> 
+                    <div className='form-input-name font-weight-700'>Institution Name</div> 
                     <Field
                     name={`${education}.university`}
                     component="input"
@@ -28,7 +28,7 @@ const Education = () => (
                     />
                 </div> 
                 <div>
-                    <div className='form-input-name'>Stard Date</div>
+                    <div className='form-input-name font-weight-700'>Stard Date</div>
                     <Field
                     name={`${education}.startDateEducation`}
                     component="input"
@@ -36,7 +36,7 @@ const Education = () => (
                     />
                 </div>
                 <div>
-                    <div className='form-input-name'>End Date</div>
+                    <div className='form-input-name font-weight-700'>End Date</div>
                     <Field
                     name={`${education}.endDateEducation`}
                     component="input"
@@ -44,7 +44,7 @@ const Education = () => (
                     />
                 </div>
                 <div>
-                    <div className='form-input-name'>City</div>
+                    <div className='form-input-name font-weight-700'>City</div>
                     <Field
                     name={`${education}.universityCity`}
                     component="input"

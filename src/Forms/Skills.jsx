@@ -10,7 +10,7 @@ const Skills = () => (
             <div key={skills} className='form margin-top-forms' id="skills">
                 <label>Skills</label>
                 <div>
-                <div className='form-input-name'>Technical</div>
+                <div className='form-input-name font-weight-700'>Technical</div>
                     <Field
                     name={`${skills}.technicalSkill`}
                     component="input"
@@ -18,7 +18,7 @@ const Skills = () => (
                     />
                 </div>
                 <div>
-                <div className='form-input-name'>Software</div>
+                <div className='form-input-name font-weight-700'>Software</div>
                     <Field
                     name={`${skills}.softwareSkill`}
                     component="input"
@@ -26,7 +26,7 @@ const Skills = () => (
                     />
                 </div>  
                 <div>
-                <div className='form-input-name'>Communication</div>
+                <div className='form-input-name font-weight-700'>Communication</div>
                     <Field
                     name={`${skills}.communicationSkill`}
                     component="input"

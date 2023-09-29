@@ -20,7 +20,7 @@ const Personal = () => (
                     />
                 </div>
                 <div>
-                    <div className='form-input-name'>Email Address</div>
+                    <div className='form-input-name font-weight-700'>Email Address</div>
                     <Field
                     name={`${personal}.email`}
                     component="input"
@@ -28,7 +28,7 @@ const Personal = () => (
                     />
                 </div>  
                 <div>
-                     <div className='form-input-name'>Title</div>
+                     <div className='form-input-name font-weight-700'>Title</div>
                     <Field
                     name={`${personal}.title`}
                     component="input"
@@ -36,14 +36,14 @@ const Personal = () => (
                     />
                 </div>
                 <div>
-                    <div className='form-input-name'>Phone Number</div>
+                    <div className='form-input-name font-weight-700'>Phone Number</div>
                     <Field
                     name={`${personal}.phoneNumber`}
                     component="input"
                     type="text"
                     />
                 </div>
-                <div className='two-column-one-three-column'>
+                <div className='two-column-one-three-column font-weight-700'>
                     <div className='form-input-name'>Address</div>
                     <Field
                     name={`${personal}.address`}

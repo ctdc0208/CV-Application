@@ -35,7 +35,7 @@ const WorkExperience = () => (
               fields.map((workExperience, index) => (
             <div key={workExperience} className='form margin-top-forms two-column' id="work-experience">
                 <label>Work Experience # {index+1}</label>
-                <div className='two-column-one-two-column'>
+                <div className='two-column-one-two-column font-weight-700'>
                     <div className='form-input-name'>Project Name</div>
                     <Field
                     name={`${workExperience}.projectName`}
@@ -44,7 +44,7 @@ const WorkExperience = () => (
                     />
                 </div>
                 <div>
-                   <div className='form-input-name'>Company Name</div>
+                   <div className='form-input-name font-weight-700'>Company Name</div>
                     <Field
                     name={`${workExperience}.companyName`}
                     component="input"
@@ -52,7 +52,7 @@ const WorkExperience = () => (
                     />
                 </div>  
                 <div>
-                    <div className='form-input-name'>Start Date</div>
+                    <div className='form-input-name font-weight-700'>Start Date</div>
                     <Field
                     name={`${workExperience}.startDateExperience`}
                     component="input"
@@ -60,14 +60,14 @@ const WorkExperience = () => (
                     />
                 </div>
                 <div>
-                    <div className='form-input-name'>End Date</div>
+                    <div className='form-input-name font-weight-700'>End Date</div>
                     <Field
                     name={`${workExperience}.endDateExperience`}
                     component="input"
                     type="text"
                     />
                 </div>
-                <div   className='form-bullet'>
+                <div className='form-bullet'>
                 <FieldArray name={`${workExperience}.experienceAcquired`} component={WorkExperienceAcquired} />
                 </div>
                 <div className='button-form-remove-container'>
