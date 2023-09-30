@@ -13,17 +13,17 @@
     margin-left: 59.25px;
 }
 
-.navbar-container button {
-    border: none;
-    font-size: 1.5rem;
-    color: black;
-    text-align: left;
-    vertical-align: middle;
-    height: 50px;
+.navbar-sticky a {
+    padding-left: 5px;
 }
 
 .navbar-active {
     border-left: 5px solid aqua;
+    padding-left: 0px !important;
+}
+
+.navbar-active button {
+    font-weight: 700;
 }
 
 .navbar-sticky a button {

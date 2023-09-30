@@ -9,19 +9,19 @@ class Navbar extends Component {
             <div className='navbar-sticky'>
 
               <Link activeClass="navbar-active" to="personal" spy={true} smooth={true} offset={-250} duration={500}>
-                <button className='font-weight-700'>Personal Information</button>
+                <button className='label-name'>Personal Information</button>
               </Link>
-              <Link  activeClass="navbar-active" to="education" spy={true} smooth={true} offset={-250} duration={500}>
-                <button className='font-weight-700'>Education</button>
+              <Link  activeClass="navbar-active" to="education" spy={true} smooth={true} offset={-95} duration={500}>
+                <button className='label-name'>Education</button>
               </Link>
-              <Link activeClass="navbar-active" to="work-experience" spy={true} smooth={true} offset={-250} duration={500}>
-                <button className='font-weight-700'>Work Experience</button>
+              <Link activeClass="navbar-active" to="work-experience" spy={true} smooth={true} offset={-145} duration={500}>
+                <button className='label-name'>Work Experience</button>
               </Link>
-              <Link activeClass="navbar-active" to="project-experience" spy={true} smooth={true} offset={-250} duration={500}>
-                <button className='font-weight-700'>Project Experience</button>
+              <Link activeClass="navbar-active" to="project-experience" spy={true} smooth={true} offset={-195} duration={500}>
+                <button className='label-name'>Project Experience</button>
               </Link>
-              <Link activeClass="navbar-active" to="skills" spy={true} smooth={true} offset={-250} duration={500}>
-                <button className='font-weight-700'>Skills</button>
+              <Link activeClass="navbar-active" to="skills" spy={true} smooth={true} offset={-245} duration={500}>
+                <button className='label-name'>Skills</button>
               </Link>
             </div>
             </div>

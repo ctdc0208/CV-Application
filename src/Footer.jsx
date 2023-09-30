@@ -16,7 +16,7 @@ const StyledFooter = styled.footer`
     background-color: black;
     box-sizing: border-box;
     padding: 1rem;
-    margin-top: 20rem;
+    margin-top: 30rem;
 `;
 
 export default Footer
