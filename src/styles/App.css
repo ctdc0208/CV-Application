@@ -23,3 +23,12 @@ button {
 .font-weight-700 {
     font-weight: 700;
 }
+
+.label-name {
+    border: none;
+    font-size: 1.5rem;
+    color: black;
+    display: flex;
+    align-items: center;
+    height: 50px;
+}

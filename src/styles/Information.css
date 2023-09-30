@@ -19,16 +19,6 @@
         background-color: white;
     }
     
-    label {
-        border: none;
-        font-size: 1.5rem;
-        color: black;
-        display: flex;
-        align-items: center;
-        height: 50px;
-        padding-bottom: 1.5rem;
-    }
-    
     form {
         margin: 10px auto;
         border: 3px solid #ccc;

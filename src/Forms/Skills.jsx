@@ -8,7 +8,7 @@ const Skills = () => (
               {({ fields }) =>
               fields.map((skills) => (
             <div key={skills} className='form margin-top-forms' id="skills">
-                <label>Skills</label>
+                <label className='label-name'>Skills</label>
                 <div className='flex-column-margin'>
                 <div className='form-input-name font-weight-700'>Technical</div>
                     <Field

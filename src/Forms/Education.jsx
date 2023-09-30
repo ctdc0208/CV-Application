@@ -10,7 +10,7 @@ const Education = () => (
               {({ fields }) =>
               fields.map((education, index) => (
             <div key={education} className='form margin-top-forms two-column' id="education">
-                <label>Education # {index+1}</label>
+                <label className='label-name'>Education # {index+1}</label>
                 <div className='two-column-one-two-column flex-column-margin'>
                     <div className='form-input-name font-weight-700'>Course Name</div>
                     <Field

@@ -33,7 +33,7 @@ const WorkExperience = () => (
               {({ fields }) =>
               fields.map((workExperience, index) => (
             <div key={workExperience} className='form margin-top-forms two-column' id="work-experience">
-                <label>Work Experience # {index+1}</label>
+                <label className='label-name'>Work Experience # {index+1}</label>
                 <div className='two-column-one-two-column font-weight-700 flex-column-margin'>
                     <div className='form-input-name'>Project Name</div>
                     <Field

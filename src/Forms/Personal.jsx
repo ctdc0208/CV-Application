@@ -10,7 +10,7 @@ const Personal = () => (
         {({ fields }) =>
               fields.map((personal) => (
             <div key={personal} className='form two-column' id="personal">
-                <label>Personal Information</label>
+                <label className='label-name'>Personal Information</label>
                 <div className='two-column-one-two-column flex-column-margin'>
                     <div className='form-input-name font-weight-700'>Full Name</div>
                     <Field
