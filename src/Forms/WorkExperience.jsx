@@ -12,17 +12,16 @@ const WorkExperienceAcquired = ({ fields }) => (
     </div>
     {fields.map((exp, index) => (
         <div key={index} className="experiences-acquired">
-          <Field 
-            name={`${exp}.workExperienceAcquired`}
-            component="input"
-            type="text-area"
-            placeholder={`Work Experience # ${index + 1}`}
-          />
            <span
             onClick={() => fields.remove(index)}
             >
               ❌
             </span>
+          <Field 
+            name={`${exp}.workExperienceAcquired`}
+            component="textarea"
+            placeholder={`Work Experience # ${index + 1}`}
+          />
         </div>
       ))}
   </React.Fragment>
@@ -67,7 +66,7 @@ const WorkExperience = () => (
                     type="text"
                     />
                 </div>
-                <div className='form-bullet'>
+                <div className='form-bullet flex-column-margin'>
                 <FieldArray name={`${workExperience}.experienceAcquired`} component={WorkExperienceAcquired} />
                 </div>
                 <div className='button-form-remove-container'>

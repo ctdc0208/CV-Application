@@ -12,17 +12,17 @@ const ProjectExperienceAcquired = ({ fields }) => (
     </div>
     {fields.map((exp, index) => (
         <div key={index} className="experiences-acquired">
-          <Field
-            name={`${exp}.projectExperienceAcquired`}
-            component="input"
-            type="text"
-            placeholder={`Project Experience # ${index + 1}`}
-          />
            <span
             onClick={() => fields.remove(index)}
           >
               ❌
           </span>
+          <Field
+            name={`${exp}.projectExperienceAcquired`}
+            component="textarea"
+            type="text"
+            placeholder={`Project Experience # ${index + 1}`}
+          />
         </div>
       ))}
   </React.Fragment>
