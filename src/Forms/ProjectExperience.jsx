@@ -35,7 +35,7 @@ const ProjectExperience = () => (
               fields.map((projectExperience, index) => (
             <div key={projectExperience} className='form margin-top-forms two-column' id="project-experience">
                 <label>Project Experience #{index+1}</label>
-                <div className='two-column-one-three-column'>
+                <div className='two-column-one-three-column flex-column-margin'>
                     <div className='form-input-name font-weight-700'>Project Name</div>
                     <Field
                     name={`${projectExperience}.projectName`}
@@ -43,7 +43,7 @@ const ProjectExperience = () => (
                     type="text"
                     />
                 </div>
-                <div>
+                <div className='flex-column-margin'>
                     <div className='form-input-name font-weight-700'>Start Date</div>
                     <Field
                     name={`${projectExperience}.startDateProject`}
@@ -51,7 +51,7 @@ const ProjectExperience = () => (
                     type="text"
                     />
                 </div>
-                <div>
+                <div className='flex-column-margin'>
                     <div className='form-input-name font-weight-700'>End Date</div>
                     <Field
                     name={`${projectExperience}.endDateProject`}

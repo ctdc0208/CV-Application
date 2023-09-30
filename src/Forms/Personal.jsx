@@ -11,15 +11,15 @@ const Personal = () => (
               fields.map((personal) => (
             <div key={personal} className='form two-column' id="personal">
                 <label>Personal Information</label>
-                <div className='two-column-one-two-column font-weight-700'>
-                    <div className='form-input-name'>Full Name</div>
+                <div className='two-column-one-two-column flex-column-margin'>
+                    <div className='form-input-name font-weight-700'>Full Name</div>
                     <Field
                     name={`${personal}.name`}
                     component="input"
                     type="text"
                     />
                 </div>
-                <div>
+                <div className='flex-column-margin'>
                     <div className='form-input-name font-weight-700'>Email Address</div>
                     <Field
                     name={`${personal}.email`}
@@ -27,7 +27,7 @@ const Personal = () => (
                     type="text"
                     />
                 </div>  
-                <div>
+                <div className='flex-column-margin'>
                      <div className='form-input-name font-weight-700'>Title</div>
                     <Field
                     name={`${personal}.title`}
@@ -35,7 +35,7 @@ const Personal = () => (
                     type="text"
                     />
                 </div>
-                <div>
+                <div className='flex-column-margin'>
                     <div className='form-input-name font-weight-700'>Phone Number</div>
                     <Field
                     name={`${personal}.phoneNumber`}
@@ -43,7 +43,7 @@ const Personal = () => (
                     type="text"
                     />
                 </div>
-                <div className='two-column-one-three-column font-weight-700'>
+                <div className='two-column-one-three-column font-weight-700 flex-column-margin'>
                     <div className='form-input-name'>Address</div>
                     <Field
                     name={`${personal}.address`}

@@ -11,7 +11,7 @@ const Education = () => (
               fields.map((education, index) => (
             <div key={education} className='form margin-top-forms two-column' id="education">
                 <label>Education # {index+1}</label>
-                <div className='two-column-one-two-column'>
+                <div className='two-column-one-two-column flex-column-margin'>
                     <div className='form-input-name font-weight-700'>Course Name</div>
                     <Field
                     name={`${education}.degree`}
@@ -19,7 +19,7 @@ const Education = () => (
                     type="text"
                     />
                 </div>
-                <div>
+                <div className='flex-column-margin'>
                     <div className='form-input-name font-weight-700'>Institution Name</div> 
                     <Field
                     name={`${education}.university`}
@@ -27,7 +27,7 @@ const Education = () => (
                     type="text"
                     />
                 </div> 
-                <div>
+                <div className='flex-column-margin'>
                     <div className='form-input-name font-weight-700'>Stard Date</div>
                     <Field
                     name={`${education}.startDateEducation`}
@@ -35,7 +35,7 @@ const Education = () => (
                     type="text"
                     />
                 </div>
-                <div>
+                <div className='flex-column-margin'>
                     <div className='form-input-name font-weight-700'>End Date</div>
                     <Field
                     name={`${education}.endDateEducation`}
@@ -43,7 +43,7 @@ const Education = () => (
                     type="text"
                     />
                 </div>
-                <div>
+                <div className='flex-column-margin'>
                     <div className='form-input-name font-weight-700'>City</div>
                     <Field
                     name={`${education}.universityCity`}

@@ -9,7 +9,7 @@ const Skills = () => (
               fields.map((skills) => (
             <div key={skills} className='form margin-top-forms' id="skills">
                 <label>Skills</label>
-                <div>
+                <div className='flex-column-margin'>
                 <div className='form-input-name font-weight-700'>Technical</div>
                     <Field
                     name={`${skills}.technicalSkill`}
@@ -17,7 +17,7 @@ const Skills = () => (
                     type="text"
                     />
                 </div>
-                <div>
+                <div className='flex-column-margin'>
                 <div className='form-input-name font-weight-700'>Software</div>
                     <Field
                     name={`${skills}.softwareSkill`}
@@ -25,7 +25,7 @@ const Skills = () => (
                     type="text"
                     />
                 </div>  
-                <div>
+                <div className='flex-column-margin'>
                 <div className='form-input-name font-weight-700'>Communication</div>
                     <Field
                     name={`${skills}.communicationSkill`}
