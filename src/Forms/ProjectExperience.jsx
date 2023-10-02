@@ -30,11 +30,14 @@ const ProjectExperienceAcquired = ({ fields }) => (
 
 const ProjectExperience = () => (
   <React.Fragment>
+    <div className='label-name'>Project Experience</div>
         <FieldArray name="projectExperience">
               {({ fields }) =>
               fields.map((projectExperience, index) => (
             <div key={projectExperience} className='form margin-top-forms two-column' id="project-experience">
+                {/*
                 <label className='label-name'>Project Experience #{index+1}</label>
+              */}
                 <div className='two-column-one-three-column flex-column-margin'>
                     <div className='form-input-name font-weight-700'>Project Name</div>
                     <Field

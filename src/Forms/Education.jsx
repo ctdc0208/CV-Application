@@ -6,11 +6,14 @@ import '../styles/Information.css';
 
 const Education = () => (
   <React.Fragment>
+    <div className='label-name'>Education</div>
       <FieldArray name="education">
               {({ fields }) =>
               fields.map((education, index) => (
             <div key={education} className='form margin-top-forms two-column' id="education">
+                {/*
                 <label className='label-name'>Education # {index+1}</label>
+                */}
                 <div className='two-column-one-two-column flex-column-margin'>
                     <div className='form-input-name font-weight-700'>Course Name</div>
                     <Field

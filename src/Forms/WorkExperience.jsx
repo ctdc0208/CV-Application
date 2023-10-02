@@ -12,11 +12,14 @@ const WorkExperienceAcquired = ({ fields }) => (
     </div>
     {fields.map((exp, index) => (
         <div key={index} className="experiences-acquired">
-           <span
+          <div>
+            <div>•</div>
+           <span className='remove-bullet'
             onClick={() => fields.remove(index)}
             >
               ❌
             </span>
+          </div>
           <Field 
             name={`${exp}.workExperienceAcquired`}
             component="textarea"
@@ -29,11 +32,14 @@ const WorkExperienceAcquired = ({ fields }) => (
 
 const WorkExperience = () => (
   <React.Fragment>
+    <div className='label-name'>Work Experience</div>
         <FieldArray name="workExperience">
               {({ fields }) =>
               fields.map((workExperience, index) => (
-            <div key={workExperience} className='form margin-top-forms two-column' id="work-experience">
-                <label className='label-name'>Work Experience # {index+1}</label>
+                <div key={workExperience} className='form margin-top-forms two-column' id="work-experience">
+                {/*
+              <label className='label-name'>Work Experience # {index+1}</label>
+            */}
                 <div className='two-column-one-two-column font-weight-700 flex-column-margin'>
                     <div className='form-input-name'>Project Name</div>
                     <Field
@@ -66,7 +72,7 @@ const WorkExperience = () => (
                     type="text"
                     />
                 </div>
-                <div className='form-bullet flex-column-margin'>
+                <div className='form-bullet'>
                 <FieldArray name={`${workExperience}.experienceAcquired`} component={WorkExperienceAcquired} />
                 </div>
                 <div className='button-form-remove-container'>
