@@ -11,9 +11,6 @@ const Education = () => (
               {({ fields }) =>
               fields.map((education, index) => (
             <div key={education} className='form margin-top-forms two-column' id="education">
-                {/*
-                <label className='label-name'>Education # {index+1}</label>
-                */}
                 <div className='two-column-one-two-column flex-column-margin'>
                     <div className='form-input-name font-weight-700'>Course Name</div>
                     <Field
@@ -56,10 +53,10 @@ const Education = () => (
                 </div>  
                 <div className='button-form-remove-container'>
                     <button
-                      className='button-form-remove'
                       onClick={() => fields.remove(index)}
                     >
-                      Remove
+                      <div>X</div>
+                      <div>Delete</div>
                     </button>
                     <div className="button-divider"></div>
                 </div>

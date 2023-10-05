@@ -109,13 +109,16 @@ class Information extends React.Component {
                       <div className="form-top-border-divider"></div>        
                       <Skills />
                     </div>
-                        <div className="buttons">
+                        <div className="submit-buttons">
                             <button 
                             type="submit" 
                             disabled={submitting || pristine}  
                             style={{ cursor: 'pointer' }}             
                             >
-                            Submit
+                            <svg className="submit-icon icon-size"></svg>
+                            <div className="submit-text">
+                                Submit
+                            </div>
                             </button>
                             <button
                             type="button"
@@ -123,7 +126,10 @@ class Information extends React.Component {
                             disabled={submitting || pristine}
                             style={{ cursor: 'pointer' }}
                             >
-                            Reset
+                            <svg className="reset-icon icon-size"></svg>
+                            <div className="submit-text">
+                                Reset
+                            </div>
                             </button>
                         </div>
                         {/* 
