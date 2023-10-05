@@ -55,8 +55,8 @@ const Education = () => (
                     <button
                       onClick={() => fields.remove(index)}
                     >
-                      <div>X</div>
-                      <div>Delete</div>
+                      <svg className='close-icon icon-size'></svg>
+                      <div className='bullet-icon-text'>Delete</div>
                     </button>
                     <div className="button-divider"></div>
                 </div>

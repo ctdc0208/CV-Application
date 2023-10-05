@@ -7,7 +7,8 @@ const WorkExperienceAcquired = ({ fields }) => (
   <React.Fragment>
     <div>
         <button className="button-add-experience-acquired" type="button" onClick={() => fields.push()}>
-          Add Experience
+          <svg className='add-icon icon-size'></svg>
+          <div className='bullet-icon-text'>Add Experiences</div>
         </button>
     </div>
     {fields.map((exp, index) => (
@@ -36,9 +37,6 @@ const WorkExperience = () => (
               {({ fields }) =>
               fields.map((workExperience, index) => (
                 <div key={workExperience} className='form margin-top-forms two-column' id="work-experience">
-                {/*
-              <label className='label-name'>Work Experience # {index+1}</label>
-            */}
                 <div className='two-column-one-two-column font-weight-700 flex-column-margin'>
                     <div className='form-input-name'>Project Name</div>
                     <Field
@@ -80,7 +78,8 @@ const WorkExperience = () => (
                       onClick={() => fields.remove(index)}
                       style={{ cursor: 'pointer' }}
                     >
-                      Remove
+                      <svg className='close-icon icon-size'></svg>
+                      <div className='bullet-icon-text'>Delete</div>
                     </button>
                     <div className="button-divider"></div>
                 </div>

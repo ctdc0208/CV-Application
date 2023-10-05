@@ -68,12 +68,13 @@ class Information extends React.Component {
 
                     <div>
                         <div className="form-top-border-divider"></div>
-                        <Education />
+                        <Education  />
                           <button
                             type="button"
                             onClick={() => push('education', undefined)}
                             >
-                            Add Education
+                            <svg className='add-icon icon-size'></svg>
+                            <div className='bullet-icon-text'>Add Education Entry</div>
                           </button>
                             
                     </div>
@@ -87,7 +88,8 @@ class Information extends React.Component {
                             type="button"
                             onClick={() => push('workExperience', undefined)}
                             >
-                            Add Work Experience
+                            <svg className='add-icon icon-size'></svg>
+                            <div className='bullet-icon-text'>Add Work Experience Entry</div>
                             </button>
                             
                     </div>
@@ -100,7 +102,8 @@ class Information extends React.Component {
                             type="button"
                             onClick={() => push('projectExperience', undefined)}
                             >
-                            Add Project Experience
+                           <svg className='add-icon icon-size'></svg>
+                            <div className='bullet-icon-text'>Add Project Experience Entry</div>
                           </button>
                           
                     </div>
@@ -108,6 +111,7 @@ class Information extends React.Component {
                     <div>   
                       <div className="form-top-border-divider"></div>        
                       <Skills />
+                      <div className="form-top-border-divider"></div>    
                     </div>
                         <div className="submit-buttons">
                             <button 
