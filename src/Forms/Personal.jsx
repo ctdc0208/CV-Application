@@ -6,11 +6,11 @@ import '../styles/Information.css';
 
 const Personal = () => (
   <React.Fragment>
+        <label className='label-name'>Personal Information</label>
         <FieldArray name="personal">
         {({ fields }) =>
               fields.map((personal) => (
-            <div key={personal} className='form two-column' id="personal">
-                <label className='label-name'>Personal Information</label>
+            <div key={personal} className='form two-column margin-top-forms' id="personal">
                 <div className='two-column-one-two-column flex-column-margin'>
                     <div className='form-input-name font-weight-700'>Full Name</div>
                     <Field
