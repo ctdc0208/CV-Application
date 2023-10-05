@@ -12,11 +12,13 @@ const ProjectExperienceAcquired = ({ fields }) => (
     </div>
     {fields.map((exp, index) => (
         <div key={index} className="experiences-acquired">
-           <span
+          <div>
+            <div className='circle-icon icon-size bullet-icon'></div>
+           <span className='remove-bullet icon-size bullet-icon icon-button'
             onClick={() => fields.remove(index)}
-          >
-              ❌
-          </span>
+            >
+            </span>
+          </div>
           <Field
             name={`${exp}.projectExperienceAcquired`}
             component="textarea"

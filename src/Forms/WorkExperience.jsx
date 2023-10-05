@@ -13,11 +13,10 @@ const WorkExperienceAcquired = ({ fields }) => (
     {fields.map((exp, index) => (
         <div key={index} className="experiences-acquired">
           <div>
-            <div>•</div>
-           <span className='remove-bullet'
+            <div className='circle-icon icon-size bullet-icon'></div>
+           <span className='remove-bullet icon-size bullet-icon icon-button'
             onClick={() => fields.remove(index)}
             >
-              ❌
             </span>
           </div>
           <Field 
