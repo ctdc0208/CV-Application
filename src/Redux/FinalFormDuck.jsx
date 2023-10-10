@@ -26,3 +26,7 @@ export const updateFormState = (form, state) => ({
 // Selectors
 export const getFormState = (state, form) =>
     (state && state.finalForm && state.finalForm[form]) || {}
+
+export const getChange = ({ state }) => (
+    <pre>{JSON.stringify(state, 0, 2)}</pre>
+)

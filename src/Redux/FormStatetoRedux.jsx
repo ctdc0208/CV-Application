@@ -8,3 +8,4 @@ const FormStateToRedux = ({ form, updateFormState }) => (
 )
 
 export default connect(undefined, { updateFormState })(FormStateToRedux)
+

@@ -3,7 +3,7 @@ import { connect } from 'react-redux'
 import { getFormState } from './FinalFormDuck'
 
 const FormStateFromRedux = ({ state }) => (
-  <pre>{JSON.stringify(state, 0, 2)}</pre>
+  console.log(JSON.stringify(state, 0, 2))
 )
 
 export default connect((state, ownProps) => ({

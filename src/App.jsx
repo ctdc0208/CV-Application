@@ -5,6 +5,7 @@ import Navbar from './Navbar';
 import Information from './Information';
 import Footer from './Footer';
 import CVpreview from './CVPreview';
+import FormStateFromRedux from './Redux/FormStateFromRedux';
 
 class App extends Component {
     render() {
@@ -21,5 +22,6 @@ class App extends Component {
       )
     }
 }
+
 
 export default App
