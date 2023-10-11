@@ -5,18 +5,21 @@ import Navbar from './Navbar';
 import Information from './Information';
 import Footer from './Footer';
 import CVpreview from './CVPreview';
-import FormStateFromRedux from './Redux/FormStateFromRedux';
+import { Provider } from 'react-redux';
+import store from './Redux/store';
 
 class App extends Component {
     render() {
       return (
         <div className='app'>
           <Header />
-          <div className='app-container'>
-            <Navbar />
-            <Information />
-            <CVpreview />
-          </div>
+            <Provider store={store}>
+              <div className='app-container'>
+                <Navbar />
+                <Information />
+                <CVpreview />
+              </div>
+            </Provider>
           <Footer />
         </div>
       )
