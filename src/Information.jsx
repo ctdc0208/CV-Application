@@ -8,7 +8,6 @@ import Skills from "./Forms/Skills";
 import { Form } from 'react-final-form';
 import arrayMutators from 'final-form-arrays';
 import FormStatetoRedux from "./Redux/FormStatetoRedux";
-import FormStateFromRedux from "./Redux/FormStateFromRedux";
 
 const onSubmit = async values => {
     window.alert(JSON.stringify(values, 0, 2))
@@ -205,7 +204,6 @@ class Information extends React.Component {
                             </div>
                             </button>
                         </div>
-                        <FormStateFromRedux form="Information" />
                         </form>
                     )}
                 />
