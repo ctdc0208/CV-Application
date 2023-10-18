@@ -9,8 +9,9 @@
         position: -webkit-sticky;
         position: sticky;
         margin-top: 30px;
+        padding: 80px;
         top: 50px;
-        height: 816.75px;
-        width: 577.5px;
+        height: 736.75px;
+        width: 497.5px;
         background-color: beige;
     }

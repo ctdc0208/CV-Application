@@ -17,7 +17,7 @@ class App extends Component {
               <div className='app-container'>
                 <Navbar />
                 <Information />
-                <CVpreview />
+                <CVpreview form="Information" />
               </div>
             </Provider>
           <Footer />
