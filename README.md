@@ -8,4 +8,4 @@ A CV Application created using React JS
 - redux store
 
 Live Preview
-https://nexus0208.github.io/CV-Application/
+https://ctdc0208.github.io/CV-Application/
