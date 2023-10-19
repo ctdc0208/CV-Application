@@ -31,7 +31,7 @@ class Information extends React.Component {
                             {
                                 "name": "Christian T. dela Cruz",
                                 "email": "christiantulao.delacruz@gmail.com",
-                                "phoneNumber": "09265537249",
+                                "phoneNumber": "+639265537249",
                                 "title": "Web Developer",
                                 "address": "228 Pagasa St. Julugan 6, Tanza, Cavite",
                                 "github" : "github.com/ctdc0208"
@@ -57,13 +57,13 @@ class Information extends React.Component {
                                     "projectName": "CV Application ",
                                     "projectExperienceAcquired": [
                                 {
-                                  "projectExperienceAcquired": "•	Developed React-Final-Form library, optimizing user input and validation capabilities."
+                                  "projectExperienceAcquired": "Developed React-Final-Form library, optimizing user input and validation capabilities."
                                 },
                                 {
-                                    "projectExperienceAcquired": "•	Using FormSpy to store and manage form data in the Redux store to render outside form."
+                                    "projectExperienceAcquired": "Using FormSpy to store and manage form data in the Redux store to render outside form."
                                 },
                                 {
-                                    "projectExperienceAcquired": "•	Utilized flex grids for layout and SVG for icons for scaling and filtering color purposes."
+                                    "projectExperienceAcquired": "Utilized flex grids for layout and SVG for icons for scaling and filtering color purposes."
                                 }
                             ]
                         },
@@ -98,7 +98,7 @@ class Information extends React.Component {
                     ],
                     "workExperience": [
                             {
-                                "projectName": "Navy, Mechanic Apprentice",
+                                "projectName": "Mechanic Apprentice",
                                 "companyName": "Philippine Navy",
                                 "startDateExperience": "August 2022",
                                 "endDateExperience": "September 2022",
