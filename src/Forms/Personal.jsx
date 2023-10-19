@@ -51,6 +51,14 @@ const Personal = () => (
                     type="text"
                     />
                 </div>
+                <div className='two-column-one-three-column font-weight-700 flex-column-margin padding-one-rem'>
+                    <div className='form-input-name'>Github</div>
+                    <Field
+                    name={`${personal}.github`}
+                    component="input"
+                    type="text"
+                    />
+                </div>
             </div>
             ))
         }
