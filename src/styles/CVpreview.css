@@ -1,19 +1,37 @@
+    .preview-bg {
+        background-color: #e6e6e6;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .preview-sticky {
+        display: flex;
+        flex-direction: column;
+        position: -webkit-sticky;
+        position: sticky;
+        margin-top: 30px;
+        top: 30px;
+        margin-bottom: 30px;
+    }
+    
     .preview-container {
         grid-column: 3 / 4;
         grid-row: 1 / 2;
         display: flex;
-        justify-content: center;
-        margin-top: 30px;
+        flex-direction: column;
+        position: -webkit-sticky;
+        position: sticky;
         height: 841.9px;
         width: 595.3px;
-        background-color: bisque;
+        background-color: #ffffff;
     }
     
     .preview-container-child {
         position: -webkit-sticky;
         position: sticky;
         top: 50px;
-        background-color: beige;
+        background-color: #ffffff;
         margin: 72px;
         padding-bottom: 97.9px;
         font-size: 11.5px;

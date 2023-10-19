@@ -11,7 +11,8 @@ const CVPreview = ({ state }) => {
             //console.log(education)
         }
     return (
-        <div>
+        <div className="preview-bg">
+        <div className="preview-sticky">
         <div className="preview-container">
                 <div className="preview-container-child">
                     <div className="personal-container">
@@ -114,6 +115,7 @@ const CVPreview = ({ state }) => {
                     </div>
                 </div>   
             </div>
+        </div>
     </div>
     )
 }
