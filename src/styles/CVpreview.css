@@ -15,9 +15,63 @@
         top: 50px;
         background-color: beige;
         margin: 72px;
+        padding-bottom: 97.9px;
         font-size: 11.5px;
+        font-family: 'Times New Roman', Times, serif;
+        line-height: 1.4;
+    }
+    
+    .space {
+        margin-top: 13.8px;
+        /*font-size + line-height*/
+    }
+    
+    .twelve-px {
+        font-size: 1.0434782608695652em;
+    }
+    
+    .bold {
+        font-weight: bold;
+    }
+    
+    .personal-container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
     }
     
     .personal-name {
         font-size: 2.0869565217391304em;
+    }
+    
+    .flex-row {
+        display: flex;
+        flex-direction: row;
+    }
+    
+    .justify-space-between {
+        display: flex;
+        justify-content: space-between;
+    }
+    
+    .bullet-space {
+        margin: 0 2px;
+    }
+    
+    .underline-border {
+        border-bottom: 1px solid black;
+    }
+    
+    .indent-left {
+        margin-left: 18px;
+    }
+    
+    ul {
+        list-style-position: outside;
+        margin-block: 0;
+        padding-inline-start: 18px;
+    }
+    
+    .right-space {
+        margin-right: 2px;
     }
