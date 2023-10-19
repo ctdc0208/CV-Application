@@ -2,8 +2,26 @@ import React from "react";
 import './styles/CVpreview.css';
 import { connect } from 'react-redux'
 import { getFormState } from './Redux/FinalFormDuck'
+import html2canvas from "html2canvas";
+import jsPDF from "jspdf";
 
 const CVPreview = ({ state }) => {
+    const printDocument = () => {
+        const input = document.getElementById('divToPrint');
+        html2canvas(input, {
+            scale:2.5
+          })
+            .then((canvas) => {
+                const imgData = canvas.toDataURL('image/png');
+                const pdf = new jsPDF('p', 'pt', 'a4');
+                pdf.addImage(imgData, 'PNG', 0, 0, 595.3, 841.9);
+                // pdf.output('dataurlnewwindow');
+                pdf.save("download.pdf");
+      })
+    ;
+      };
+
+
     const education = [];
         for (let i = 0; i < 2; i++) {
             const educationDegree = state.values.education[i];
@@ -13,7 +31,7 @@ const CVPreview = ({ state }) => {
     return (
         <div className="preview-bg">
         <div className="preview-sticky">
-        <div className="preview-container">
+        <div id="divToPrint" className="preview-container">
                 <div className="preview-container-child">
                     <div className="personal-container">
                         <div className="personal-name">{state.values.personal[0].name}</div>
@@ -115,6 +133,7 @@ const CVPreview = ({ state }) => {
                     </div>
                 </div>   
             </div>
+        <button onClick={printDocument}>Print</button>
         </div>
     </div>
     )
