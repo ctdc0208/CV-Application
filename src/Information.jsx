@@ -29,16 +29,17 @@ class Information extends React.Component {
                     initialValues={{
                         "personal": [
                             {
-                                "name": "Christian",
-                                "email": "christiandelacruz0208@gmail.com",
+                                "name": "Christian T. dela Cruz",
+                                "email": "christiantulao.delacruz@gmail.com",
                                 "phoneNumber": "09265537249",
                                 "title": "Web Developer",
-                              "address": "228 Pagasa St. Julugan 6, Tanza, Cavite"
+                                "address": "228 Pagasa St. Julugan 6, Tanza, Cavite",
+                                "github" : "github.com/ctdc0208"
                             }
                           ],
                           "education": [
                               {
-                                  "degree": "BSME",
+                                  "degree": "Bachelor of Science in Mechanical Engineering",
                                   "university": "Technological University of the Philippines - Manila",
                                   "startDateEducation": "2019",
                                   "endDateEducation": "2023",
@@ -56,13 +57,13 @@ class Information extends React.Component {
                                     "projectName": "CV Application ",
                                     "projectExperienceAcquired": [
                                 {
-                                  "projectExperienceAcquired": "React- final form"
+                                  "projectExperienceAcquired": "•	Developed React-Final-Form library, optimizing user input and validation capabilities."
                                 },
                                 {
-                                    "projectExperienceAcquired": "Use flex grids for layout and svg for filter color functions"
+                                    "projectExperienceAcquired": "•	Using FormSpy to store and manage form data in the Redux store to render outside form."
                                 },
                                 {
-                                    "projectExperienceAcquired": "Redux to read outside your form. Using FormSpy to keep a copy of your form data in the Redux store."
+                                    "projectExperienceAcquired": "•	Utilized flex grids for layout and SVG for icons for scaling and filtering color purposes."
                                 }
                             ]
                         },
@@ -70,13 +71,13 @@ class Information extends React.Component {
                                 "projectName": "Weather App",
                                 "projectExperienceAcquired": [
                                     {
-                                        "projectExperienceAcquired": "•\tAsync function that calls open weather API"
+                                        "projectExperienceAcquired": "Asynchronous function to interact with the OpenWeather API, for real-time weather data."
                                     },
                                     {
-                                        "projectExperienceAcquired": "•\tSearch the weather of the city using its own name and latitude and longitude coordinates"
+                                        "projectExperienceAcquired": "Search feature allowing users to obtain weather information by specifying a city's name."
                                     },
                                     {
-                                        "projectExperienceAcquired": "•\tUse locale time string to get current time and set following days."
+                                        "projectExperienceAcquired": "Use locale time string to provide current time and forecast information for future days."
                                     }
                                 ]
                             },
@@ -84,13 +85,13 @@ class Information extends React.Component {
                                 "projectName": "DC Motor Variable Speed Controller",
                                 "projectExperienceAcquired": [
                                     {
-                                  "projectExperienceAcquired": "Arduino with speed controller for controlling DC motor speed."
+                                  "projectExperienceAcquired": "Designed an Arduino-based speed controller system variable control of DC motor speeds."
                                 },
                                 {
-                                    "projectExperienceAcquired": "Use push button to control variable speeds"
+                                    "projectExperienceAcquired": "Implemented a user-friendly interface with push buttons, for variable speed adjustments."
                                 },
                                 {
-                                    "projectExperienceAcquired": "Develop a device that can run on a 12V battery\n\n"
+                                    "projectExperienceAcquired": "Successfully engineered a portable device capable of operating on a 12V battery source."
                                 }
                             ]
                         }
