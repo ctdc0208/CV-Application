@@ -3,15 +3,21 @@
         grid-row: 1 / 2;
         display: flex;
         justify-content: center;
+        margin-top: 30px;
+        height: 841.9px;
+        width: 595.3px;
+        background-color: bisque;
     }
     
     .preview-container-child {
         position: -webkit-sticky;
         position: sticky;
-        margin-top: 30px;
-        padding: 80px;
         top: 50px;
-        height: 736.75px;
-        width: 497.5px;
         background-color: beige;
+        margin: 72px;
+        font-size: 11.5px;
+    }
+    
+    .personal-name {
+        font-size: 2.0869565217391304em;
     }
