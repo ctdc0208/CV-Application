@@ -20,11 +20,13 @@
         grid-row: 1 / 2;
         display: flex;
         flex-direction: column;
-        position: -webkit-sticky;
-        position: sticky;
+        /*
         height: 841.9px;
         width: 595.3px;
+        */
         background-color: #ffffff;
+        height: 48rem;
+        aspect-ratio: 1 / 1.41;
     }
     
     .preview-container-child {
@@ -32,11 +34,10 @@
         position: sticky;
         top: 50px;
         background-color: #ffffff;
-        margin: 72px;
-        padding-bottom: 97.9px;
-        font-size: 11.5px;
+        margin: 4.5rem;
+        font-size: 10.16px;
         font-family: 'Times New Roman', Times, serif;
-        line-height: 1.4;
+        line-height: 1.2;
     }
     
     .space {
@@ -92,4 +93,20 @@
     
     .right-space {
         margin-right: 2px;
+    }
+    
+    .print-button-container {
+        margin-top: 15px;
+    }
+    
+    .circle-icon {
+        background-image: url(../Assets/circle.svg);
+    }
+    
+    .print-icon {
+        background-image: url(../Assets/printer.svg);
+    }
+    
+    .download-icon {
+        background-image: url(../Assets/download.svg);
     }
