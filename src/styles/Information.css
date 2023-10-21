@@ -50,19 +50,23 @@
     
     .submit-icon {
         background-image: url(../Assets/check.svg);
-        height: 1.3rem;
-        width: 1.3rem;
-        filter: invert(38%) sepia(41%) saturate(1168%) hue-rotate(135deg) brightness(100%) contrast(100%);
     }
     
     .reset-icon {
         background-image: url(../Assets/restart.svg);
+    }
+    
+    .submit-icon,
+    .reset-icon,
+    .print-icon,
+    .download-icon {
         height: 1.3rem;
         width: 1.3rem;
         filter: invert(38%) sepia(41%) saturate(1168%) hue-rotate(135deg) brightness(100%) contrast(100%);
     }
     
-    .submit-buttons {
+    .submit-buttons,
+    .print-button-container {
         display: flex;
         flex-flow: row nowrap;
         justify-content: center;
@@ -75,14 +79,16 @@
         font-size: 1.1rem;
     }
     
-    .submit-buttons button {
+    .submit-buttons button,
+    .print-button-container button {
         display: flex;
         flex-direction: row;
         font-size: 1.25rem !important;
         margin: 0 15px;
     }
     
-    .main-container button {
+    .main-container button,
+    .print-button {
         border: 1px solid #ccc;
         border-radius: 30px;
         -webkit-box-shadow: 0px -5px 5px 0px rgba(0, 0, 0, 0.1) inset;
@@ -96,12 +102,14 @@
         flex-direction: row;
     }
     
-    .main-container button:hover {
+    .main-container button:hover,
+    .print-button:hover {
         background-color: #008b8b;
         color: white;
     }
     
-    .main-container button:hover svg {
+    .main-container button:hover svg,
+    .print-button-container button:hover svg {
         filter: invert(100%) sepia(100%) saturate(0%) hue-rotate(288deg) brightness(112%) contrast(109%);
     }
     

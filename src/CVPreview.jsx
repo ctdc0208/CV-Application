@@ -133,7 +133,20 @@ const CVPreview = ({ state }) => {
                     </div>
                 </div>   
             </div>
-        <button onClick={printDocument}>Print</button>
+        <div className="print-button-container">
+            <button onClick={printDocument} className="print-button">
+            <svg className="print-icon icon-size"></svg>
+                <div className="submit-text">
+                    Print
+                </div>
+            </button>
+            <button className="print-button">
+                <svg className="download-icon icon-size"></svg>
+                <div className="submit-text">
+                    Download
+                </div>
+            </button>
+        </div>
         </div>
     </div>
     )
