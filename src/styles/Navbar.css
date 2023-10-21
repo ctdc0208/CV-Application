@@ -3,6 +3,10 @@
     grid-row: 1 / 2;
 }
 
+.navbar-container button {
+    padding-left: 15px;
+}
+
 .navbar-sticky {
     display: flex;
     flex-direction: column;
@@ -13,17 +17,15 @@
     margin-left: 59.25px;
 }
 
-.navbar-sticky a {
-    padding-left: 5px;
-}
-
 .navbar-active {
-    border-left: 5px solid #008b8b;
+    /* border-left: 5px solid #008b8b; */
     padding-left: 0px !important;
+    background-color: #008b8b;
 }
 
 .navbar-active button {
     font-weight: 700;
+    color: white;
 }
 
 .navbar-sticky a button {
