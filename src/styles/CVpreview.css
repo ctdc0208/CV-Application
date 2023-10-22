@@ -37,7 +37,8 @@
         margin: 4.1025641025rem;
         font-size: 10.5px;
         font-family: 'Times New Roman', Times, serif;
-        line-height: 1.277126465;
+        /* line-height: 1.277126465; */
+        line-height: 1.45;
     }
     
     .space {
