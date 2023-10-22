@@ -34,7 +34,7 @@ class Information extends React.Component {
                                 "phoneNumber": "+639265537249",
                                 "title": "Web Developer",
                                 "address": "228 Pagasa St. Julugan 6, Tanza, Cavite",
-                                "github" : "github.com/ctdc0208"
+                                "githubLink" : "github.com/ctdc0208"
                             }
                           ],
                           "education": [
@@ -55,6 +55,8 @@ class Information extends React.Component {
                             "projectExperience": [
                                 {
                                     "projectName": "CV Application ",
+                                    "startDateProject": "August 2023",
+                                    "endDateProject": "Present",
                                     "projectExperienceAcquired": [
                                 {
                                   "projectExperienceAcquired": "Developed React-Final-Form library, optimizing user input and validation capabilities."
@@ -69,6 +71,8 @@ class Information extends React.Component {
                         },
                             {
                                 "projectName": "Weather App",
+                                "startDateProject": "January",
+                                "endDateProject": "- February 2022",
                                 "projectExperienceAcquired": [
                                     {
                                         "projectExperienceAcquired": "Asynchronous function to interact with the OpenWeather API, for real-time weather data."
@@ -82,19 +86,34 @@ class Information extends React.Component {
                                 ]
                             },
                             {
-                                "projectName": "DC Motor Variable Speed Controller",
+                                "projectName": "Admin Dashboard",
+                                "startDateProject": "November 2022",
+                                "endDateProject": "",
                                 "projectExperienceAcquired": [
                                     {
-                                  "projectExperienceAcquired": "Designed an Arduino-based speed controller system variable control of DC motor speeds."
+                                  "projectExperienceAcquired": "Analyzed the full-resolution project design file to plan the HTML layout effectively."
                                 },
                                 {
-                                    "projectExperienceAcquired": "Implemented a user-friendly interface with push buttons, for variable speed adjustments."
+                                    "projectExperienceAcquired": "Proficiently used CSS Grid and Flexbox for webpage layout and design arrangement."
                                 },
                                 {
-                                    "projectExperienceAcquired": "Successfully engineered a portable device capable of operating on a 12V battery source."
+                                    "projectExperienceAcquired": "Use suitable webpage assets, SVG icons, and fonts for a distinct and captivating design."
                                 }
                             ]
-                        }
+                            },
+                            {
+                                "projectName": "Test Driven Development using Jest",
+                                "startDateProject": "January 2022",
+                                "endDateProject": "",
+                                "projectExperienceAcquired": [
+                                    {
+                                  "projectExperienceAcquired": "Verified computed properties in returned object, including average, min, max, and length."
+                                },
+                                {
+                                    "projectExperienceAcquired": "Conducted testing for a capitalize function, capitalizing the first character of a string."
+                                }
+                            ]
+                            }
                     ],
                     "workExperience": [
                             {
@@ -114,9 +133,9 @@ class Information extends React.Component {
                         ],
                         "skills": [
                             {
-                                "technicalSkill": "Programming Languages : JavaScript, HTML/CSS, C++",
-                                "softwareSkill": "Frameworks/Libraries : React, npm, Node.js",
-                                "communicationSkill": "Software/Tools : Git, GitHub"
+                                "technicalSkill": "JavaScript, HTML/CSS, C++",
+                                "softwareSkill": "React, npm, Node.js",
+                                "communicationSkill": "Git, GitHub"
                             }
                         ]
                         

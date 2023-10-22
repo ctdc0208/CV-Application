@@ -148,6 +148,22 @@
         margin: 5px 20px 0 0;
     }
     
+    .flex-row-margin {
+        display: flex;
+        flex-direction: row;
+        margin: 5px 20px 0 0;
+    }
+    
+    .flex-row-margin input {
+        width: 82%;
+    }
+    
+    .flex-row-margin div {
+        display: flex;
+        align-items: center;
+        width: 18%;
+    }
+    
     .button-divider {
         border: 1px solid #ccc;
         border-style: solid none none none;

@@ -40,23 +40,39 @@ const CVPreview = ({ state }) => {
                             <div className="bullet-space">•</div>
                             <div>{state.values.personal[0].phoneNumber}</div>
                             <div className="bullet-space">•</div>
-                            <div>{state.values.personal[0].github}</div>
+                            <div>{state.values.personal[0].githubLink}</div>
                         </div>
                         <div className="space"></div>
                     </div>
                     <div className="skills-container">
                         <div className="underline-border twelve-px">Skills</div>
                         <div className="indent-left">
-                            <div>{state.values.skills[0].softwareSkill}</div>
-                            <div>{state.values.skills[0].technicalSkill}</div>
-                            <div>{state.values.skills[0].communicationSkill}</div>
+                            <div className="flex-row">
+                                <div className="bold right-space">Frameworks/Libraries :</div>
+                                <div>{state.values.skills[0].softwareSkill}</div>
+                            </div>
+                            <div className="flex-row">
+                                <div className="bold right-space">Programming Languages :</div>
+                                <div>{state.values.skills[0].technicalSkill}</div>
+                            </div>
+                            <div className="flex-row">
+                                <div className="bold right-space">Software/Tools :</div>
+                                <div>{state.values.skills[0].communicationSkill}</div>
+                            </div>
                         </div>
                         <div className="space"></div>
                     </div> 
                     <div className="project-container">
                         <div>
                             <div className="underline-border twelve-px">Projects</div>
-                            <div className="bold">{state.values.projectExperience[0].projectName}</div>
+                            <div className="flex-row justify-space-between">
+                                <div className="bold">{state.values.projectExperience[0].projectName}</div>
+                                <div className="flex-row">
+                                    <div className="bold">{state.values.projectExperience[0].startDateProject}</div>
+                                    <div className="bullet-space">-</div>
+                                    <div className="bold">{state.values.projectExperience[0].endDateProject}</div>
+                                </div>
+                            </div>
                             <ul className="indent-left">
                                 <li>{state.values.projectExperience[0].projectExperienceAcquired[0].projectExperienceAcquired}</li>
                                 <li>{state.values.projectExperience[0].projectExperienceAcquired[1].projectExperienceAcquired}</li>
@@ -65,7 +81,14 @@ const CVPreview = ({ state }) => {
                             <div className="space"></div>
                         </div>
                         <div>
-                            <div className="bold">{state.values.projectExperience[1].projectName}</div>
+                            <div className="flex-row justify-space-between">
+                                <div className="bold">{state.values.projectExperience[1].projectName}</div>
+                                <div className="flex-row">
+                                    <div className="bold">{state.values.projectExperience[1].startDateProject}</div>
+                                    <div className="bullet-space">-</div>
+                                    <div className="bold">{state.values.projectExperience[1].endDateProject}</div>
+                                </div>
+                            </div>
                             <ul className="indent-left">
                                 <li>{state.values.projectExperience[1].projectExperienceAcquired[0].projectExperienceAcquired}</li>
                                 <li>{state.values.projectExperience[1].projectExperienceAcquired[1].projectExperienceAcquired}</li>
@@ -74,7 +97,14 @@ const CVPreview = ({ state }) => {
                             <div className="space"></div>
                         </div>
                         <div>
-                            <div className="bold">{state.values.projectExperience[2].projectName}</div>
+                            <div className="flex-row justify-space-between">
+                                <div className="bold">{state.values.projectExperience[2].projectName}</div>
+                                <div className="flex-row">
+                                    <div className="bold">{state.values.projectExperience[2].startDateProject}</div>
+                                    <div className="bullet-space">-</div>
+                                    <div className="bold">{state.values.projectExperience[2].endDateProject}</div>
+                                </div>
+                            </div>
                             <ul className="indent-left">
                                 <li>{state.values.projectExperience[2].projectExperienceAcquired[0].projectExperienceAcquired}</li>
                                 <li>{state.values.projectExperience[2].projectExperienceAcquired[1].projectExperienceAcquired}</li>
@@ -82,6 +112,22 @@ const CVPreview = ({ state }) => {
                             </ul>
                             <div className="space"></div>
                         </div>
+                        <div>
+                            <div className="flex-row justify-space-between">
+                                <div className="bold">{state.values.projectExperience[3].projectName}</div>
+                                <div className="flex-row">
+                                    <div className="bold">{state.values.projectExperience[3].startDateProject}</div>
+                                    <div className="bullet-space">-</div>
+                                    <div className="bold">{state.values.projectExperience[3].endDateProject}</div>
+                                </div>
+                            </div>
+                            <ul className="indent-left">
+                                <li>{state.values.projectExperience[3].projectExperienceAcquired[0].projectExperienceAcquired}</li>
+                                <li>{state.values.projectExperience[3].projectExperienceAcquired[1].projectExperienceAcquired}</li>
+                            </ul>
+                            <div className="space"></div>
+                        </div>
+                        
                     </div>
                     <div className="education-container">
                         <div className="underline-border twelve-px">Education & Credentials</div>

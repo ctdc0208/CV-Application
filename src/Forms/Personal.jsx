@@ -27,14 +27,14 @@ const Personal = () => (
                     type="text"
                     />
                 </div>  
-                <div className='flex-column-margin'>
+                {/* <div className='flex-column-margin'>
                      <div className='form-input-name font-weight-700'>Title</div>
                     <Field
                     name={`${personal}.title`}
                     component="input"
                     type="text"
                     />
-                </div>
+                </div> */}
                 <div className='flex-column-margin'>
                     <div className='form-input-name font-weight-700'>Phone Number</div>
                     <Field
@@ -43,22 +43,38 @@ const Personal = () => (
                     type="text"
                     />
                 </div>
-                <div className='two-column-one-three-column font-weight-700 flex-column-margin padding-one-rem'>
+                {/* <div className='two-column-one-three-column font-weight-700 flex-column-margin padding-one-rem'>
                     <div className='form-input-name'>Address</div>
                     <Field
                     name={`${personal}.address`}
                     component="input"
                     type="text"
                     />
-                </div>
-                <div className='two-column-one-three-column font-weight-700 flex-column-margin padding-one-rem'>
-                    <div className='form-input-name'>Github</div>
+                </div> */}
+                <div className='two-column-one-three-column font-weight-700 flex-row-margin padding-one-rem'>
+                    <div className='form-input-name'>Github Link:</div>
                     <Field
-                    name={`${personal}.github`}
+                    name={`${personal}.githubLink`}
                     component="input"
                     type="text"
                     />
                 </div>
+                {/* <div className='two-column-one-three-column font-weight-700 flex-row-margin padding-one-rem'>
+                    <div className='form-input-name'>LinkedIn Link:</div>
+                    <Field
+                    name={`${personal}.linkedInLink`}
+                    component="input"
+                    type="text"
+                    />
+                </div>
+                <div className='two-column-one-three-column font-weight-700 flex-row-margin padding-one-rem'>
+                    <div className='form-input-name'>Portfolio Link:</div>
+                    <Field
+                    name={`${personal}.portfolioLink`}
+                    component="input"
+                    type="text"
+                    />
+                </div> */}
             </div>
             ))
         }
