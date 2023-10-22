@@ -6,6 +6,17 @@ import html2canvas from "html2canvas";
 import jsPDF from "jspdf";
 
 const CVPreview = ({ state }) => {
+    
+    let json =[{state}]
+
+    const information = [];
+    
+    for(let i = 0; i < json.length; i++) {
+        let obj = json[i];
+        information.push(obj)
+        console.log(obj.state.values);
+    }
+
     const printDocument = () => {
         const input = document.getElementById('divToPrint');
         html2canvas(input, {
@@ -19,15 +30,8 @@ const CVPreview = ({ state }) => {
                 pdf.save("download.pdf");
       })
     ;
-      };
-
-
-    const education = [];
-        for (let i = 0; i < 2; i++) {
-            const educationDegree = state.values.education[i];
-            education.push(educationDegree);
-            //console.log(education)
-        }
+    };
+    
     return (
         <div className="preview-bg">
         <div className="preview-sticky">
@@ -133,26 +137,26 @@ const CVPreview = ({ state }) => {
                         <div className="underline-border twelve-px">Education & Credentials</div>
                         <div>
                             <div className="flex-row justify-space-between">
-                               <div className="bold">{education[0].degree}</div>
+                               <div className="bold">{state.values.education[0].degree}</div>
                                <div className="flex-row">
-                                    <div>{education[0].startDateEducation}</div>
+                                    <div>{state.values.education[0].startDateEducation}</div>
                                     <div className="bullet-space">-</div>
-                                    <div>{education[0].endDateEducation}</div>
+                                    <div>{state.values.education[0].endDateEducation}</div>
                                </div>
                             </div>
-                            <div>{education[0].university}</div>
+                            <div>{state.values.education[0].university}</div>
                             <div className="space"></div>
                         </div>
                         <div>
                             <div className="flex-row justify-space-between">
-                               <div className="bold">{education[1].degree}</div>
+                               <div className="bold">{state.values.education[1].degree}</div>
                                <div className="flex-row">
-                                    <div>{education[1].startDateEducation}</div>
+                                    <div>{state.values.education[1].startDateEducation}</div>
                                     <div className="bullet-space">-</div>
-                                    <div>{education[1].endDateEducation}</div>
+                                    <div>{state.values.education[1].endDateEducation}</div>
                                </div>
                             </div>
-                            <div>{education[1].university}</div>
+                            <div>{state.values.education[1].university}</div>
                             <div className="space"></div>
                         </div>
                     </div>
