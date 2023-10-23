@@ -5,17 +5,174 @@ import { getFormState } from './Redux/FinalFormDuck'
 import html2canvas from "html2canvas";
 import jsPDF from "jspdf";
 
-const CVPreview = ({ state }) => {
-    
-    let json =[{state}]
+function Item(props) {
+    return <li>{props.print}</li>;
+  }
 
-    const information = [];
+const CVPreview = ({ state }) => {
+
+    // const cart = [
+    //     ["Corn", "Potato", "Radish"],
+    //     ["Tomato", "Graphes", "Mango"],
+    // ];
     
-    for(let i = 0; i < json.length; i++) {
-        let obj = json[i];
-        information.push(obj)
-        console.log(obj.state.values);
-    }
+    // const testPrint = cart.map((items, index) =>
+    //             <ol key={index}>
+    //             {items.map((subItems, sIndex) => {
+    //               return <li key={sIndex}>{subItems}</li>;
+    //             })}
+    //           </ol>
+    // );
+    
+    
+    const information = [state.values];
+    const education =[state.values.education];
+    const project = [state.values.projectExperience]
+    const work = [state.values.workExperience]
+    // console.log(project)
+    
+    const printPersonal = information.map((personal, index) =>
+    <div className="personal-container" key={index}>
+        <div className="personal-name">{personal.personal[index].name}</div>
+            <div className="flex-row twelve-px">
+                <div>{personal.personal[index].email}</div>
+                    <div className="bullet-space">•</div>
+                <div>{personal.personal[index].phoneNumber}</div>
+                    <div className="bullet-space">•</div>
+                <div>{personal.personal[index].githubLink}</div>
+            </div>
+        <div className="space"></div>
+    </div>
+    );
+
+    const printSkills = information.map((skills, index) =>
+        <div className="skills-container" key={index}>
+            <div className="underline-border twelve-px">Skills</div>
+            <div className="indent-left">
+                <div className="flex-row">
+                    <div className="bold right-space">Frameworks/Libraries :</div>
+                    <div>{skills.skills[index].softwareSkill}</div>
+                </div>
+                <div className="flex-row">
+                    <div className="bold right-space">Programming Languages :</div>
+                    <div>{skills.skills[index].technicalSkill}</div>
+                </div>
+                <div className="flex-row">
+                    <div className="bold right-space">Software/Tools :</div>
+                    <div>{skills.skills[index].communicationSkill}</div>
+                </div>
+            </div>
+            <div className="space"></div>
+        </div> 
+    )
+
+    const printProject = project.map((projects, index) =>
+        <div className="project-container" key={index}>
+            <div className="underline-border twelve-px">Projects</div>
+            <div>
+                {projects.map((subItems, sIndex) => {
+                    const projectExperience = [subItems.projectExperienceAcquired];
+                    const printProjectExperience = projectExperience.map((projectExperience, subIndex) => {
+                        return <div key={subIndex}>
+                            {projectExperience.map((subsubItems, subsubIndex) => {
+                                return <ul key={subsubIndex} className="indent-left">
+                                    <li>
+                                        {subsubItems.projectExperienceAcquired}
+                                    </li>
+                                </ul>
+                            })}
+                        </div>
+                    })
+                    return <div key={sIndex}>
+                        <div className="flex-row justify-space-between">
+                            <div className="bold">{subItems.projectName}</div>
+                            <div className="flex-row">
+                                <div className="bold">{subItems.startDateProject}</div>
+                                    <div className="bullet-space">-</div>
+                                <div className="bold">{subItems.endDateProject}</div>
+                            </div>
+                        </div>
+                        <div>{printProjectExperience}</div>
+                        <div className="space"></div>
+                    </div>
+                })}
+            </div>
+        </div>
+    )
+    
+    const printEducation = education.map((education, index) =>
+        <div key={index} className="education-container">
+            <div className="underline-border twelve-px">Education & Credentials</div>
+            <div>
+                {education.map((subItems, sIndex) => {
+                    return <div key={sIndex}>
+                        <div>
+                            <div className="flex-row justify-space-between">
+                                <div className="bold">{subItems.degree}</div>
+                                <div className="flex-row">
+                                        <div>{subItems.startDateEducation}</div>
+                                        <div className="bullet-space">-</div>
+                                        <div>{subItems.endDateEducation}</div>
+                                </div>
+                            </div>
+                        </div>
+                            <div>{subItems.university}</div>
+                            <div className="space"></div>
+                    </div>
+                    })}
+            </div>
+        </div>
+    );
+
+    const printWork = work.map((works, index) =>
+        <div className="project-container" key={index}>
+            <div className="underline-border twelve-px">Projects</div>
+            <div>
+                {works.map((subItems, sIndex) => {
+                    const workExperience = [subItems.experienceAcquired];
+                    const printWorkExperience = workExperience.map((workExperience, subIndex) => {
+                        return <div key={subIndex}>
+                            {workExperience.map((subsubItems, subsubIndex) => {
+                                return <ul key={subsubIndex} className="indent-left">
+                                    <li>
+                                        {subsubItems.workExperienceAcquired}
+                                    </li>
+                                </ul>
+                            })}
+                        </div>
+                    })
+                    return <div key={sIndex}>
+                        <div className="flex-row justify-space-between">
+                            <div className="bold">{subItems.projectName}</div>
+                            <div className="flex-row">
+                                <div className="bold">{subItems.startDateExperience}</div>
+                                    <div className="bullet-space">-</div>
+                                <div className="bold">{subItems.endDateExperience}</div>
+                            </div>
+                        </div>
+                        <div>{printWorkExperience}</div>
+                        <div className="space"></div>
+                    </div>
+                })}
+            </div>
+        </div>
+    ) 
+
+    
+
+    // console.log(state.values)
+    
+    // let json =[{state}]
+
+    
+    // for(let i = 0; i < json.length; i++) {
+    //     let obj = json[i];
+    //     information.push(obj)
+    //     console.log(information);
+    //     // console.log(obj.state.values.personal[i].name);
+    // }
+
+    // console.log(information)
 
     const printDocument = () => {
         const input = document.getElementById('divToPrint');
@@ -31,42 +188,46 @@ const CVPreview = ({ state }) => {
       })
     ;
     };
-    
+
     return (
         <div className="preview-bg">
         <div className="preview-sticky">
         <div id="divToPrint" className="preview-container">
                 <div className="preview-container-child">
-                    <div className="personal-container">
-                        <div className="personal-name">{state.values.personal[0].name}</div>
-                        <div className="flex-row twelve-px">
+                    <div>{printPersonal}</div>
+                    <div>{printSkills}</div>
+                    <div>{printProject}</div>
+                    <div>{printEducation}</div>
+                    <div>{printWork}</div>
+
+                        {/* <div className="personal-name">{state.values.personal[0].name}</div> */}
+                        {/* <div className="flex-row twelve-px">
                             <div>{state.values.personal[0].email}</div>
                             <div className="bullet-space">•</div>
                             <div>{state.values.personal[0].phoneNumber}</div>
                             <div className="bullet-space">•</div>
                             <div>{state.values.personal[0].githubLink}</div>
                         </div>
-                        <div className="space"></div>
-                    </div>
-                    <div className="skills-container">
-                        <div className="underline-border twelve-px">Skills</div>
-                        <div className="indent-left">
-                            <div className="flex-row">
-                                <div className="bold right-space">Frameworks/Libraries :</div>
-                                <div>{state.values.skills[0].softwareSkill}</div>
+                        <div className="space"></div> */}
+                        {/* <div className="skills-container">
+                            <div className="underline-border twelve-px">Skills</div>
+                            <div className="indent-left">
+                                <div className="flex-row">
+                                    <div className="bold right-space">Frameworks/Libraries :</div>
+                                    <div>{state.values.skills[0].softwareSkill}</div>
+                                </div>
+                                <div className="flex-row">
+                                    <div className="bold right-space">Programming Languages :</div>
+                                    <div>{state.values.skills[0].technicalSkill}</div>
+                                </div>
+                                <div className="flex-row">
+                                    <div className="bold right-space">Software/Tools :</div>
+                                    <div>{state.values.skills[0].communicationSkill}</div>
+                                </div>
                             </div>
-                            <div className="flex-row">
-                                <div className="bold right-space">Programming Languages :</div>
-                                <div>{state.values.skills[0].technicalSkill}</div>
-                            </div>
-                            <div className="flex-row">
-                                <div className="bold right-space">Software/Tools :</div>
-                                <div>{state.values.skills[0].communicationSkill}</div>
-                            </div>
-                        </div>
-                        <div className="space"></div>
-                    </div> 
-                    <div className="project-container">
+                            <div className="space"></div>
+                        </div>  */}
+                    {/* <div className="project-container">
                         <div>
                             <div className="underline-border twelve-px">Projects</div>
                             <div className="flex-row justify-space-between">
@@ -132,35 +293,8 @@ const CVPreview = ({ state }) => {
                             <div className="space"></div>
                         </div>
                         
-                    </div>
-                    <div className="education-container">
-                        <div className="underline-border twelve-px">Education & Credentials</div>
-                        <div>
-                            <div className="flex-row justify-space-between">
-                               <div className="bold">{state.values.education[0].degree}</div>
-                               <div className="flex-row">
-                                    <div>{state.values.education[0].startDateEducation}</div>
-                                    <div className="bullet-space">-</div>
-                                    <div>{state.values.education[0].endDateEducation}</div>
-                               </div>
-                            </div>
-                            <div>{state.values.education[0].university}</div>
-                            <div className="space"></div>
-                        </div>
-                        <div>
-                            <div className="flex-row justify-space-between">
-                               <div className="bold">{state.values.education[1].degree}</div>
-                               <div className="flex-row">
-                                    <div>{state.values.education[1].startDateEducation}</div>
-                                    <div className="bullet-space">-</div>
-                                    <div>{state.values.education[1].endDateEducation}</div>
-                               </div>
-                            </div>
-                            <div>{state.values.education[1].university}</div>
-                            <div className="space"></div>
-                        </div>
-                    </div>
-                    <div className="work-container">
+                    </div> */}
+                    {/* <div className="work-container">
                         <div className="underline-border twelve-px">Work Experience</div>
                         <div>
                             <div className="flex-row justify-space-between">
@@ -180,7 +314,7 @@ const CVPreview = ({ state }) => {
                                 <li>{state.values.workExperience[0].experienceAcquired[1].workExperienceAcquired}</li>
                             </ul>
                         </div>
-                    </div>
+                    </div> */}
                 </div>   
             </div>
         <div className="print-button-container">
