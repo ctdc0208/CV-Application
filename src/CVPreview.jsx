@@ -2,8 +2,10 @@ import React from "react";
 import './styles/CVpreview.css';
 import { connect } from 'react-redux'
 import { getFormState } from './Redux/FinalFormDuck'
+import { v4 as uuidv4 } from 'uuid';
 import html2canvas from "html2canvas";
 import jsPDF from "jspdf";
+
 
 function Item(props) {
     return <li>{props.print}</li>;
@@ -24,12 +26,9 @@ const CVPreview = ({ state }) => {
     //           </ol>
     // );
     
-    
-    const information = [state.values];
     const education =[state.values.education];
     const project = [state.values.projectExperience]
     const work = [state.values.workExperience]
-    
     const personal = [state.values.personal]
     const skill = [state.values.skills]
 
@@ -151,19 +150,39 @@ const CVPreview = ({ state }) => {
         <div key={index} className="education-container">
             <div className="underline-border twelve-px">Education & Credentials</div>
             <div>
-                {education.map((subItems, sIndex) => {
-                    return <div key={sIndex}>
-                        <div>
-                            <div className="flex-row justify-space-between">
-                                <div className="bold">{subItems.degree}</div>
-                                <div className="flex-row">
-                                        <div>{subItems.startEndDateEducation}</div>
+                    {education.map((subItems, index) => {
+                        const getData = [subItems]
+                        const result = getData.map((o) => ({
+                            ...o,
+                            id: `${uuidv4()}`
+                        }));
+                        const printEducationSecond = result.map((subEducation) => {
+                            return <div key={subEducation.id}>
+                                    <div>
+                                    <div className="flex-row justify-space-between">
+                                    <div className="bold">{subEducation.degree}</div>
+                                    <div className="flex-row">
+                                    <div>{subEducation.startEndDateEducation}</div>
+                                    </div>
+                                    </div>
+                                    </div>
+                                    <div>{subEducation.university}</div>
+                                    <div className="space"></div>
+                                </div>
+                        })
+                        return <div key={index}>
+                            <div>{printEducationSecond}</div>
+                            {/* <div>
+                                <div className="flex-row justify-space-between">
+                                    <div className="bold">{subItems.degree}</div>
+                                    <div className="flex-row">
+                                            <div>{subItems.startEndDateEducation}</div>
+                                    </div>
                                 </div>
                             </div>
+                                <div>{subItems.university}</div>
+                                <div className="space"></div> */}
                         </div>
-                            <div>{subItems.university}</div>
-                            <div className="space"></div>
-                    </div>
                     })}
             </div>
         </div>
