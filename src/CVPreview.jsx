@@ -158,16 +158,14 @@ const CVPreview = ({ state }) => {
                         }));
                         const printEducationSecond = result.map((subEducation) => {
                             return <div key={subEducation.id}>
-                                    <div>
-                                    <div className="flex-row justify-space-between">
-                                    <div className="bold">{subEducation.degree}</div>
-                                    <div className="flex-row">
-                                    <div>{subEducation.startEndDateEducation}</div>
-                                    </div>
-                                    </div>
-                                    </div>
-                                    <div>{subEducation.university}</div>
-                                    <div className="space"></div>
+                                        <div className="flex-row justify-space-between">
+                                            <div className="bold">{subEducation.degree}</div>
+                                                <div className="flex-row">
+                                                <div>{subEducation.startEndDateEducation}</div>
+                                        </div>
+                                        </div>
+                                            <div>{subEducation.university}</div>
+                                        <div className="space"></div>
                                 </div>
                         })
                         return <div key={index}>
