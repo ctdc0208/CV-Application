@@ -12,19 +12,6 @@ function Item(props) {
   }
 
 const CVPreview = ({ state }) => {
-
-    // const cart = [
-    //     ["Corn", "Potato", "Radish"],
-    //     ["Tomato", "Graphes", "Mango"],
-    // ];
-    
-    // const testPrint = cart.map((items, index) =>
-    //             <ol key={index}>
-    //             {items.map((subItems, sIndex) => {
-    //               return <li key={sIndex}>{subItems}</li>;
-    //             })}
-    //           </ol>
-    // );
     
     const education =[state.values.education];
     const project = [state.values.projectExperience]
@@ -78,41 +65,6 @@ const CVPreview = ({ state }) => {
             })}
         </div>
     ) 
-
-    // const printPersonal = information.map((personal, index) =>
-    // <div className="personal-container" key={index}>
-    //     <div className="personal-name">{personal.personal[index].name}</div>
-    //         <div className="flex-row twelve-px">
-    //             <div>{personal.personal[index].email}</div>
-    //                 <div className="bullet-space">•</div>
-    //             <div>{personal.personal[index].phoneNumber}</div>
-    //                 <div className="bullet-space">•</div>
-    //             <div>{personal.personal[index].githubLink}</div>
-    //         </div>
-    //     <div className="space"></div>
-    // </div>
-    // );
-
-    // const printSkills = information.map((skills, index) =>
-    //     <div className="skills-container" key={index}>
-    //         <div className="underline-border twelve-px">Skills</div>
-    //         <div className="indent-left">
-    //             <div className="flex-row">
-    //                 <div className="bold right-space">Frameworks/Libraries :</div>
-    //                 <div>{skills.skills[index].softwareSkill}</div>
-    //             </div>
-    //             <div className="flex-row">
-    //                 <div className="bold right-space">Programming Languages :</div>
-    //                 <div>{skills.skills[index].technicalSkill}</div>
-    //             </div>
-    //             <div className="flex-row">
-    //                 <div className="bold right-space">Software/Tools :</div>
-    //                 <div>{skills.skills[index].communicationSkill}</div>
-    //             </div>
-    //         </div>
-    //         <div className="space"></div>
-    //     </div> 
-    // )
 
     const printProject = project.map((projects, index) =>
         <div className="project-container" key={index}>
@@ -170,16 +122,6 @@ const CVPreview = ({ state }) => {
                         })
                         return <div key={index}>
                             <div>{printEducationSecond}</div>
-                            {/* <div>
-                                <div className="flex-row justify-space-between">
-                                    <div className="bold">{subItems.degree}</div>
-                                    <div className="flex-row">
-                                            <div>{subItems.startEndDateEducation}</div>
-                                    </div>
-                                </div>
-                            </div>
-                                <div>{subItems.university}</div>
-                                <div className="space"></div> */}
                         </div>
                     })}
             </div>
@@ -191,48 +133,52 @@ const CVPreview = ({ state }) => {
             <div className="underline-border twelve-px">Projects</div>
             <div>
                 {works.map((subItems, sIndex) => {
-                    const workExperience = [subItems.experienceAcquired];
-                    const printWorkExperience = workExperience.map((workExperience, subIndex) => {
-                        return <div key={subIndex}>
-                            {workExperience.map((subsubItems, subsubIndex) => {
-                                return <ul key={subsubIndex} className="indent-left">
-                                    <li>
-                                        {subsubItems.workExperienceAcquired}
-                                    </li>
-                                </ul>
-                            })}
-                        </div>
-                    })
-                    return <div key={sIndex}>
-                        <div className="flex-row justify-space-between">
-                            <div className="bold">{subItems.projectName}</div>
-                            <div className="flex-row">
-                                <div className="bold">{subItems.startEndDateExperience}</div>
+                    const getDataWork = [subItems]
+                        const resultWork = getDataWork.map((o) => ({
+                            ...o,
+                            id: `${uuidv4()}`
+                        }));
+                        const printWorkSecond = resultWork.map((subWork) => {
+                            const workExperience = [subWork.experienceAcquired];
+                            const printWorkExperience = workExperience.map((workExperienceTwo, subIndex) => {
+                                return <div key={subIndex}>
+                                    {workExperienceTwo?.map((subsubItems, subsubIndex) => {
+                                         const getData = [subsubItems]
+                                         const result = getData.map((o) => ({
+                                             ...o,
+                                             id: `${uuidv4()}`
+                                         }));
+
+                                        const printSecondWorkExperience = result.map((subsubWork) => {
+                                            return <li key={subsubWork.id}>
+                                                {subsubWork?.workExperienceAcquired}
+                                            </li>
+                                        })
+
+                                        return <ul key={subsubIndex}  className="indent-left">
+                                                {printSecondWorkExperience}
+                                        </ul>
+                                    })}
+                                </div>
+                            })
+                            return <div key={subWork.id}>
+                            <div className="flex-row justify-space-between">
+                                <div className="bold">{subWork.projectName}</div>
+                                <div className="flex-row">
+                                    <div className="bold">{subWork.startEndDateExperience}</div>
+                                </div>
                             </div>
+                            <div>{printWorkExperience}</div>
+                            <div className="space"></div>
                         </div>
-                        <div>{printWorkExperience}</div>
-                        <div className="space"></div>
+                        })
+                    return <div key={sIndex}>
+                        <div>{printWorkSecond}</div>
                     </div>
                 })}
             </div>
         </div>
     ) 
-
-    
-
-    // console.log(state.values)
-    
-    // let json =[{state}]
-
-    
-    // for(let i = 0; i < json.length; i++) {
-    //     let obj = json[i];
-    //     information.push(obj)
-    //     console.log(information);
-    //     // console.log(obj.state.values.personal[i].name);
-    // }
-
-    // console.log(information)
 
     const printDocument = () => {
         const input = document.getElementById('divToPrint');
