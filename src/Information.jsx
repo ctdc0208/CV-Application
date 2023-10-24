@@ -41,22 +41,19 @@ class Information extends React.Component {
                               {
                                   "degree": "Bachelor of Science in Mechanical Engineering",
                                   "university": "Technological University of the Philippines - Manila",
-                                  "startDateEducation": "2019",
-                                  "endDateEducation": "2023",
+                                  "startEndDateEducation": "2019 - 2023",
                                   "universityCity": "Manila, Philippines"
                                 },
                                 {
                                     "degree": "DOST – SEI Undergraduate Scholarship",
                                     "university": "RA. 7687",
-                                    "startDateEducation": "2019",
-                                    "endDateEducation": "2023"
+                                    "startEndDateEducation": "2019 - 2023",
                                 }
                             ],
                             "projectExperience": [
                                 {
-                                    "projectName": "CV Application ",
-                                    "startDateProject": "August 2023",
-                                    "endDateProject": "Present",
+                                    "projectName": "CV Application",
+                                    "startEndDateProject": "August 2023 - Present",
                                     "projectExperienceAcquired": [
                                 {
                                   "projectExperienceAcquired": "Developed React-Final-Form library, optimizing user input and validation capabilities."
@@ -71,8 +68,7 @@ class Information extends React.Component {
                         },
                             {
                                 "projectName": "Weather App",
-                                "startDateProject": "January",
-                                "endDateProject": "- February 2022",
+                                "startEndDateProject": "January - February 2022",
                                 "projectExperienceAcquired": [
                                     {
                                         "projectExperienceAcquired": "Asynchronous function to interact with the OpenWeather API, for real-time weather data."
@@ -87,8 +83,7 @@ class Information extends React.Component {
                             },
                             {
                                 "projectName": "Admin Dashboard",
-                                "startDateProject": "November 2022",
-                                "endDateProject": "",
+                                "startEndDateProject": "November 2022",
                                 "projectExperienceAcquired": [
                                     {
                                   "projectExperienceAcquired": "Analyzed the full-resolution project design file to plan the HTML layout effectively."
@@ -103,8 +98,7 @@ class Information extends React.Component {
                             },
                             {
                                 "projectName": "Test Driven Development using Jest",
-                                "startDateProject": "January 2022",
-                                "endDateProject": "",
+                                "startEndDateProject": "January 2022",
                                 "projectExperienceAcquired": [
                                     {
                                   "projectExperienceAcquired": "Verified computed properties in returned object, including average, min, max, and length."
@@ -119,8 +113,7 @@ class Information extends React.Component {
                             {
                                 "projectName": "Mechanic Apprentice",
                                 "companyName": "Philippine Navy",
-                                "startDateExperience": "August 2022",
-                                "endDateExperience": "September 2022",
+                                "startEndDateExperience": "August - September 2022",
                                 "experienceAcquired": [
                                     {
                                         "workExperienceAcquired": "Assisted in the installation and removal of ship components, such as engines, pumps, and valves. "

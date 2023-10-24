@@ -54,21 +54,21 @@ const WorkExperience = () => (
                     />
                 </div>  
                 <div className='flex-column-margin'>
-                    <div className='form-input-name font-weight-700'>Start Date</div>
+                    <div className='form-input-name font-weight-700'>Start - End Date</div>
                     <Field
-                    name={`${workExperience}.startDateExperience`}
+                    name={`${workExperience}.startEndDateExperience`}
                     component="input"
                     type="text"
                     />
                 </div>
-                <div className='flex-column-margin'>
+                {/* <div className='flex-column-margin'>
                     <div className='form-input-name font-weight-700'>End Date</div>
                     <Field
                     name={`${workExperience}.endDateExperience`}
                     component="input"
                     type="text"
                     />
-                </div>
+                </div> */}
                 <div className='form-bullet'>
                 <FieldArray name={`${workExperience}.experienceAcquired`} component={WorkExperienceAcquired} />
                 </div>

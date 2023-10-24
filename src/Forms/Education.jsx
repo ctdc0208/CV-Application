@@ -28,21 +28,21 @@ const Education = () => (
                     />
                 </div> 
                 <div className='flex-column-margin'>
-                    <div className='form-input-name font-weight-700'>Stard Date</div>
+                    <div className='form-input-name font-weight-700'>Stard - End Date</div>
                     <Field
-                    name={`${education}.startDateEducation`}
+                    name={`${education}.startEndDateEducation`}
                     component="input"
                     type="text"
                     />
                 </div>
-                <div className='flex-column-margin'>
+                {/* <div className='flex-column-margin'>
                     <div className='form-input-name font-weight-700'>End Date</div>
                     <Field
                     name={`${education}.endDateEducation`}
                     component="input"
                     type="text"
                     />
-                </div>
+                </div> */}
                 <div className='flex-column-margin'>
                     <div className='form-input-name font-weight-700'>City</div>
                     <Field

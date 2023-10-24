@@ -47,21 +47,21 @@ const ProjectExperience = () => (
                     />
                 </div>
                 <div className='flex-column-margin'>
-                    <div className='form-input-name font-weight-700'>Start Date</div>
+                    <div className='form-input-name font-weight-700'>Start - End Date</div>
                     <Field
-                    name={`${projectExperience}.startDateProject`}
+                    name={`${projectExperience}.startEndDateProject`}
                     component="input"
                     type="text"
                     />
                 </div>
-                <div className='flex-column-margin'>
+                {/* <div className='flex-column-margin'>
                     <div className='form-input-name font-weight-700'>End Date</div>
                     <Field
                     name={`${projectExperience}.endDateProject`}
                     component="input"
                     type="text"
                     />
-                </div>
+                </div> */}
                 <div  className='form-bullet'>
                 <FieldArray name={`${projectExperience}.projectExperienceAcquired`} component={ProjectExperienceAcquired} />
                 </div>

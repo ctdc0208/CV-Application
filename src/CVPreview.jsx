@@ -87,9 +87,7 @@ const CVPreview = ({ state }) => {
                         <div className="flex-row justify-space-between">
                             <div className="bold">{subItems.projectName}</div>
                             <div className="flex-row">
-                                <div className="bold">{subItems.startDateProject}</div>
-                                    <div className="bullet-space">-</div>
-                                <div className="bold">{subItems.endDateProject}</div>
+                                <div className="bold">{subItems.startEndDateProject}</div>
                             </div>
                         </div>
                         <div>{printProjectExperience}</div>
@@ -110,9 +108,7 @@ const CVPreview = ({ state }) => {
                             <div className="flex-row justify-space-between">
                                 <div className="bold">{subItems.degree}</div>
                                 <div className="flex-row">
-                                        <div>{subItems.startDateEducation}</div>
-                                        <div className="bullet-space">-</div>
-                                        <div>{subItems.endDateEducation}</div>
+                                        <div>{subItems.startEndDateEducation}</div>
                                 </div>
                             </div>
                         </div>
@@ -145,9 +141,7 @@ const CVPreview = ({ state }) => {
                         <div className="flex-row justify-space-between">
                             <div className="bold">{subItems.projectName}</div>
                             <div className="flex-row">
-                                <div className="bold">{subItems.startDateExperience}</div>
-                                    <div className="bullet-space">-</div>
-                                <div className="bold">{subItems.endDateExperience}</div>
+                                <div className="bold">{subItems.startEndDateExperience}</div>
                             </div>
                         </div>
                         <div>{printWorkExperience}</div>
