@@ -70,28 +70,46 @@ const CVPreview = ({ state }) => {
         <div className="project-container" key={index}>
             <div className="underline-border twelve-px">Projects</div>
             <div>
-                {projects.map((subItems, sIndex) => {
-                    const projectExperience = [subItems.projectExperienceAcquired];
-                    const printProjectExperience = projectExperience.map((projectExperience, subIndex) => {
-                        return <div key={subIndex}>
-                            {projectExperience.map((subsubItems, subsubIndex) => {
-                                return <ul key={subsubIndex} className="indent-left">
-                                    <li>
-                                        {subsubItems.projectExperienceAcquired}
-                                    </li>
-                                </ul>
-                            })}
-                        </div>
-                    })
-                    return <div key={sIndex}>
-                        <div className="flex-row justify-space-between">
-                            <div className="bold">{subItems.projectName}</div>
-                            <div className="flex-row">
-                                <div className="bold">{subItems.startEndDateProject}</div>
+            {projects.map((subItems, sIndex) => {
+                    const getDataProject = [subItems]
+                        const resultProject = getDataProject.map((o) => ({
+                            ...o,
+                            id: `${uuidv4()}`
+                        }));
+                        const printProjectSecond = resultProject.map((subProject) => {
+                            const projectExperience = [subProject.projectExperienceAcquired];
+                            const printProjectExperience = projectExperience.map((projectExperienceTwo, subIndex) => {
+                                return <div key={subIndex}>
+                                    {projectExperienceTwo?.map((subsubItems, subsubIndex) => {
+                                         const getData = [subsubItems]
+                                         const result = getData.map((o) => ({
+                                             ...o,
+                                             id: `${uuidv4()}`
+                                         }));
+                                        const printSecondProjectExperience = result.map((subsubProject) => {
+                                            return <li key={subsubProject.id}>
+                                                {subsubProject?.projectExperienceAcquired}
+                                            </li>
+                                        })
+                                        return <ul key={subsubIndex}  className="indent-left">
+                                                {printSecondProjectExperience}
+                                        </ul>
+                                    })}
+                                </div>
+                            })
+                            return <div key={subProject.id}>
+                            <div className="flex-row justify-space-between">
+                                <div className="bold">{subProject.projectName}</div>
+                                <div className="flex-row">
+                                    <div className="bold">{subProject.startEndDateProject}</div>
+                                </div>
                             </div>
+                            <div>{printProjectExperience}</div>
+                            <div className="space"></div>
                         </div>
-                        <div>{printProjectExperience}</div>
-                        <div className="space"></div>
+                        })
+                    return <div key={sIndex}>
+                        <div>{printProjectSecond}</div>
                     </div>
                 })}
             </div>
