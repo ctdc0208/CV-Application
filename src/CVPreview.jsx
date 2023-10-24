@@ -29,42 +29,91 @@ const CVPreview = ({ state }) => {
     const education =[state.values.education];
     const project = [state.values.projectExperience]
     const work = [state.values.workExperience]
-    // console.log(project)
     
-    const printPersonal = information.map((personal, index) =>
-    <div className="personal-container" key={index}>
-        <div className="personal-name">{personal.personal[index].name}</div>
-            <div className="flex-row twelve-px">
-                <div>{personal.personal[index].email}</div>
-                    <div className="bullet-space">•</div>
-                <div>{personal.personal[index].phoneNumber}</div>
-                    <div className="bullet-space">•</div>
-                <div>{personal.personal[index].githubLink}</div>
-            </div>
-        <div className="space"></div>
-    </div>
-    );
+    const personal = [state.values.personal]
+    const skill = [state.values.skills]
 
-    const printSkills = information.map((skills, index) =>
-        <div className="skills-container" key={index}>
-            <div className="underline-border twelve-px">Skills</div>
-            <div className="indent-left">
-                <div className="flex-row">
-                    <div className="bold right-space">Frameworks/Libraries :</div>
-                    <div>{skills.skills[index].softwareSkill}</div>
+    const printPersonal = personal.map((personals, index) =>
+        <div key={index}>
+            {personals.map((subItems, sIndex) => {
+                return <div key={sIndex}>
+                    <div className="personal-container" key={sIndex}>
+                    <div className="personal-name">{subItems.name}</div>
+                    <div className="flex-row twelve-px">
+                    <div>{subItems.email}</div>
+                    <div className="bullet-space">•</div>
+                    <div>{subItems.phoneNumber}</div>
+                    <div className="bullet-space">•</div>
+                    <div>{subItems.githubLink}</div>
+                    </div>
+                    <div className="space"></div>
+                    </div>
                 </div>
-                <div className="flex-row">
-                    <div className="bold right-space">Programming Languages :</div>
-                    <div>{skills.skills[index].technicalSkill}</div>
-                </div>
-                <div className="flex-row">
-                    <div className="bold right-space">Software/Tools :</div>
-                    <div>{skills.skills[index].communicationSkill}</div>
-                </div>
-            </div>
-            <div className="space"></div>
-        </div> 
+            })}
+        </div>
     )
+
+    const printSkills = skill.map((skills, index) =>
+        <div key={index}>
+            {skills.map((subItems, sIndex) => {
+                return <div key={sIndex}>
+                    <div className="skills-container" key={index}>
+                    <div className="underline-border twelve-px">Skills</div>
+                    <div className="indent-left">
+                    <div className="flex-row">
+                    <div className="bold right-space">Frameworks/Libraries :</div>
+                    <div>{subItems.softwareSkill}</div>
+                    </div>
+                    <div className="flex-row">
+                    <div className="bold right-space">Programming Languages :</div>
+                    <div>{subItems.technicalSkill}</div>
+                    </div>
+                    <div className="flex-row">
+                    <div className="bold right-space">Software/Tools :</div>
+                    <div>{subItems.communicationSkill}</div>
+                    </div>
+                    </div>
+                    <div className="space"></div>
+                    </div> 
+                </div>
+            })}
+        </div>
+    ) 
+
+    // const printPersonal = information.map((personal, index) =>
+    // <div className="personal-container" key={index}>
+    //     <div className="personal-name">{personal.personal[index].name}</div>
+    //         <div className="flex-row twelve-px">
+    //             <div>{personal.personal[index].email}</div>
+    //                 <div className="bullet-space">•</div>
+    //             <div>{personal.personal[index].phoneNumber}</div>
+    //                 <div className="bullet-space">•</div>
+    //             <div>{personal.personal[index].githubLink}</div>
+    //         </div>
+    //     <div className="space"></div>
+    // </div>
+    // );
+
+    // const printSkills = information.map((skills, index) =>
+    //     <div className="skills-container" key={index}>
+    //         <div className="underline-border twelve-px">Skills</div>
+    //         <div className="indent-left">
+    //             <div className="flex-row">
+    //                 <div className="bold right-space">Frameworks/Libraries :</div>
+    //                 <div>{skills.skills[index].softwareSkill}</div>
+    //             </div>
+    //             <div className="flex-row">
+    //                 <div className="bold right-space">Programming Languages :</div>
+    //                 <div>{skills.skills[index].technicalSkill}</div>
+    //             </div>
+    //             <div className="flex-row">
+    //                 <div className="bold right-space">Software/Tools :</div>
+    //                 <div>{skills.skills[index].communicationSkill}</div>
+    //             </div>
+    //         </div>
+    //         <div className="space"></div>
+    //     </div> 
+    // )
 
     const printProject = project.map((projects, index) =>
         <div className="project-container" key={index}>
@@ -188,6 +237,7 @@ const CVPreview = ({ state }) => {
         <div className="preview-sticky">
         <div id="divToPrint" className="preview-container">
                 <div className="preview-container-child">
+
                     <div>{printPersonal}</div>
                     <div>{printSkills}</div>
                     <div>{printProject}</div>
